@@ -1,17 +1,31 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import './SideBar.css'
 
 //Import Images====>
 import logo from '../../../assets/logo1.png'
 
 //Import icons
-import { IoMdSpeedometer } from 'react-icons/io'
-import { MdDeliveryDining, MdOutlineExplore, MdOutlinePermContactCalendar } from 'react-icons/md'
+import { IoIosQrScanner, IoMdSpeedometer } from 'react-icons/io'
+import { MdEventAvailable } from 'react-icons/md'
 import { BsCreditCard2Front, BsQuestionCircle, BsTrophy } from 'react-icons/bs'
-import { AiOutlinePieChart } from 'react-icons/ai'
-import { BiTrendingUp } from 'react-icons/bi'
-
+import { FaUserEdit } from "react-icons/fa";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { LuHelpingHand } from "react-icons/lu";
 const SideBar = () => {
+  const navigate = useNavigate()
+  const handleQR=()=>{
+    navigate('/qrcode')
+  }  
+  const handleEvents=()=>{
+    navigate('/events')
+  }
+  const handleRanking=()=>{
+    navigate('/ranking')
+  }   
+  const handleInfo = () => {
+    navigate('/profile'); // Chuyển hướng đến /dashboard/profile
+  };
   return (
     <div className='sideBar grid'>
       <div className='logoDiv flex'>
@@ -21,7 +35,7 @@ const SideBar = () => {
 
       <div className='menuDiv'>
         <h3 className='divTitle'>
-          QUICK MENU
+          TÍNH NĂNG
         </h3>
         <ul className='menuLists grid'>
 
@@ -29,34 +43,34 @@ const SideBar = () => {
             <a href='#' className='menuLink flex'>
               <IoMdSpeedometer className='icon'/>
               <span className='smallText'>
-                Dashboard
+                Trang Chủ
               </span>
             </a>
           </li>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={handleQR}>
             <a href='#' className='menuLink flex'>
-              <MdDeliveryDining className='icon'/>
+              <IoIosQrScanner className='icon'/>
               <span className='smallText'>
-                My orders
+                Quét QR
               </span>
             </a>
           </li>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={handleEvents}>
             <a href='#' className='menuLink flex'>
-              <MdOutlineExplore className='icon'/>
+              <MdEventAvailable className='icon'/>
               <span className='smallText'>
-                Explore
+                Sự Kiện
               </span>
             </a>
           </li>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={handleRanking}>
             <a href='#' className='menuLink flex'>
               <BsTrophy className='icon'/>
               <span className='smallText'>
-                Product
+                Xếp Hạng
               </span>
             </a>
           </li>
@@ -66,33 +80,33 @@ const SideBar = () => {
 
       <div className='settingsDiv'>
         <h3 className='divTitle'>
-          SETTINGS
+          CÀI ĐẶT
         </h3>
         <ul className='menuLists grid'>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={handleInfo}>
             <a href='#' className='menuLink flex'>
-              <AiOutlinePieChart className='icon'/>
+              <FaUserEdit className='icon'/>
               <span className='smallText'>
-                Charts
+                Thông Tin
               </span>
             </a>
           </li>
 
           <li className='listItem'>
             <a href='#' className='menuLink flex'>
-              <BiTrendingUp className='icon' />
+              <RiLockPasswordLine className='icon' />
               <span className='smallText'>
-                Trends
+                Mật Khẩu
               </span>
             </a>
           </li>
 
           <li className='listItem'>
             <a href='#' className='menuLink flex'>
-              <MdOutlinePermContactCalendar className='icon'/>
+              <LuHelpingHand className='icon'/>
               <span className='smallText'>
-                Contact
+                Hỗ Trợ
               </span>
             </a>
           </li>
@@ -101,7 +115,7 @@ const SideBar = () => {
             <a href='#' className='menuLink flex'>
               <BsCreditCard2Front className='icon'/>
               <span className='smallText'>
-                Billing
+                Lịch Sử
               </span>
             </a>
           </li>
@@ -120,6 +134,7 @@ const SideBar = () => {
         </div>
       </div>
     </div>
+    
   )
 }
 

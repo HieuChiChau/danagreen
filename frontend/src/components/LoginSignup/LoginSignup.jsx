@@ -5,7 +5,8 @@ import user_icon from '../../assets/person.png'
 import email_icon from '../../assets/email.png'
 import password_icon from '../../assets/password.png'
 import { useNavigate } from 'react-router-dom'
-
+import gg from '../../assets/gg.png'
+import fb from '../../assets/fb.png'
 import AuthAPI from '../../api/auth' //Import API Class
 
 const LoginSignup = () => {
@@ -43,9 +44,17 @@ const LoginSignup = () => {
                 <div className='text'>{action}</div>
                 <div className='underline'></div>
             </div>
-
+            
             <div className='inputs'>
-                {action === 'Login' ? <div></div> : <div className='input'>
+                {action === 'Login' ? <div className='option-login'>
+                    <button className='login-button'>
+                    <img src={gg} alt='Google' className='login-icon'/>
+                    </button>
+                    <button className='login-button'>
+                    <img src={fb} alt='Facebook' className='login-icon'/>
+                    </button>
+                </div> 
+                : <div className='input'>
                     <img src={user_icon} alt='' />
                     <input 
                         type='text' 

@@ -1,0 +1,241 @@
+:root {
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+    /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.home{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .overplay{
+        padding: 10px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgb(94, 106, 127);
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+    }
+
+    video{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+
+    .homeContent{
+        width: 100%;
+        height: max-content;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: var(--whiteColor);
+        z-index: 100;
+
+        .textDiv{
+            padding: 2rem 0;
+
+            .smallText{
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            .homeTitle{
+                position: relative;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.main{
+    width: 100%;
+    padding: 20px;
+    .secTitle{
+        .title{
+            position: relative;
+            width: max-content;
+            color: var(--textColor);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after{
+                position: absolute;
+                content: '';
+                background: var(--paleGreen);
+                height: 5px;
+                width: 120px;
+                right: 0;
+                bottom: 5px;
+                z-index: -1;
+            }
+        }
+    }
+    .secContent{
+        justify-content: center;
+        gap: 1.5rem;
+        .singleDestination{
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background: var(--whiteColor);
+            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+            overflow: hidden;
+            &:hover{
+                background: var(--whiteColor);
+                box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+                transition: .3s ease;
+            }
+            .imageDiv{
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 2s ease;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .cardInfo{
+                padding: 1rem;
+                .desTitile{
+                    color: var(--blackColor);
+                    font-size: 1.25rem;
+                }
+                .continent{
+                    gap: .5rem;
+                    .icon{
+                        color: var(--textColor);
+                        font-size: 18px;
+                    }
+                    .name{
+                        color: var(--textColor);
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                }
+                .fees{
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-top: 1.5px solid var(--greyText);
+                    border-bottom: 1.5px solid var(--greyText);
+                    .grade{
+                        color: var(--textColor);
+                        max-width: 200px;
+                        line-height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 17px;
+                        small{
+                            text-align: center;
+                            background: var(--PrimaryColor);
+                            border-radius: 1rem;
+                            color: var(--whiteColor);
+                            padding: 1px 10px;
+                            font-size: 10px;
+                        }
+                    }
+                    .price{
+                        font-size: 1.1rem;
+                        color: var(--blackColor);
+                    }
+                }
+                .desc{
+                    font-size: 13.5px;
+                    color: var(--textColor);
+                    font-weight: 500;
+                }
+                .btnn{
+                    margin-top: 1rem;
+                    color: var(--blackColor);
+                    font-weight: 600;
+                    justify-content: space-between;
+                    gap: .5rem;
+
+                }
+            }
+        }
+
+    }
+}
+.back{
+    border: .1px solid var(--textColor);   
+    width: 140px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    p{
+        font-size: var(--h2FontSize);
+        font-weight: 500;
+        .icon-back{
+            padding-right: 10x;
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    .title{
+        font-size: 1.5rem;
+        &::after{
+            width: 115px !important;
+        }
+    }
+    .secContent{
+        grid-template-columns: repeat(2, 1fr);
+
+        .singleDestination{
+            height: auto;
+
+        }
+    }
+}
+@media screen and (min-width: 840px){
+    .secContent{
+        grid-template-columns: repeat(3, 1fr);
+
+        .singleDestination{
+            height: auto;
+
+        }
+    }
+}
+

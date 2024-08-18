@@ -1,5 +1,6 @@
 import React from 'react'
 import './Top.css'
+import { useNavigate } from 'react-router-dom';
 
 //Import Icons ===>
 import { BiSearchAlt } from 'react-icons/bi'
@@ -13,6 +14,10 @@ import video from '../../../../assets/video1.mp4'
 import img_trs from '../../../../assets/bin-transparent.png'
 
 const Top = () => {
+  const navigate = useNavigate()
+  const handleImageClick = () => {
+    navigate('/profile'); // Chuyển hướng đến /dashboard/profile
+  };
   return (
     <div className='topSection'>
       <div className='headerSection flex'>
@@ -30,7 +35,7 @@ const Top = () => {
           <TbMessageCircle className='icon'/>
           <IoNotificationsOutline className='icon'/>
           <div className='adminImage'>
-            <img src={img} alt=''/>
+            <img src={img} alt='' onClick={handleImageClick}/>
           </div>
         </div>
       </div>
@@ -42,8 +47,8 @@ const Top = () => {
           <p>The worlds flast growing your skill in natural bullards!</p>
 
           <div className='buttons flex'>
-            <button className='btn'>Explore More</button>
-            <button className='btn transparent'>Top Sellers</button>
+            <button className='btn'>Quét Mã</button>
+            <button className='btn transparent'>Xếp Hạng</button>
           </div>
 
           <div className='videoDiv'>

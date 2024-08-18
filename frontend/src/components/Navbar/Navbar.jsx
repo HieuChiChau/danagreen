@@ -43,7 +43,7 @@ const Navbar = () => {
             className={activeItem === 'hero' ? 'btn' : ''}
             onClick={() => handleItemClick('hero')}
           >
-            Home
+            Trang Chủ
           </Link>
         </li>
         <li>
@@ -55,7 +55,7 @@ const Navbar = () => {
             className={activeItem === 'program' ? 'btn' : ''}
             onClick={() => handleItemClick('program')}
           >
-            Program
+            Thương Hiệu
           </Link>
         </li>
         <li>
@@ -67,7 +67,7 @@ const Navbar = () => {
             className={activeItem === 'about' ? 'btn' : ''}
             onClick={() => handleItemClick('about')}
           >
-            About Us
+            Cảm Hứng
           </Link>
         </li>
         <li>
@@ -79,7 +79,7 @@ const Navbar = () => {
             className={activeItem === 'product' ? 'btn' : ''}
             onClick={() => handleItemClick('product')}
           >
-            Campus
+            Sản Phẩm
           </Link>
         </li>
         <li>
@@ -91,7 +91,19 @@ const Navbar = () => {
             className={activeItem === 'testimonials' ? 'btn' : ''}
             onClick={() => handleItemClick('testimonials')}
           >
-            Testimonials
+            Đánh Giá
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='loginsignup'
+            smooth={true}
+            offset={-260}
+            duration={500}
+            className={activeItem === 'loginsignup' ? 'btn' : ''}
+            onClick={() => handleItemClick('loginsignup')}
+          >
+            Đăng Nhập
           </Link>
         </li>
         <li>
@@ -103,7 +115,7 @@ const Navbar = () => {
             className={activeItem === 'contact' ? 'btn' : ''}
             onClick={() => handleItemClick('contact')}
           >
-            Contact us
+            Liên Hệ
           </Link>
         </li>
       </ul>

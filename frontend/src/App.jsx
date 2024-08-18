@@ -12,7 +12,10 @@ import Footer from './components/Footer/Footer'
 import VideoPlayer from './components/VideoPlayer/VideoPlayer'
 import LoginSignup from './components/LoginSignup/LoginSignup'
 import Dashboard from './components/Dashboard/Dashboard'
-
+import Profile from './components/Dashboard/DashboardSon/Profile/Profile'
+import Ranking from './components/Dashboard/DashboardSon/Ranking/Ranking'
+import ShowQR from './components/Dashboard/DashboardSon/QR/ShowQR'
+import Events from './components/Dashboard/DashboardSon/Events/Events'
 const App = () => {
   
   const[playState, setPlayState] = useState(false)
@@ -42,6 +45,10 @@ const App = () => {
           </div>
         }/>
         <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/events' element={<Events/>}/>
+        <Route path='/ranking' element={<Ranking/>}/>
+        <Route path='/qrcode' element={<ShowQR/>}/>
       </Routes>
     </Router>
   )

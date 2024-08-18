@@ -1,0 +1,186 @@
+:root{
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    background-color: var(--whiteColor);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--greyText);
+  }
+  
+  .form-title {
+    font-size: var(--h2FontSize);
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--blackColor);
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-button {
+    width: 10rem;
+    height: 10rem;
+    border: none;
+    background: var(--paleGreen);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px var(--greyText);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .social-button img{
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .social-button:hover {
+    background: var(--PrimaryColor);
+  }
+  
+  .social-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .separator {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .separator span {
+    background-color: var(--bgColor);
+    padding: 0 1rem;
+    font-size: var(--normalFontSize);
+    color: var(--textColor);
+  }
+  
+  .profilr-form {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    padding: 0.8rem 8rem;
+    border: 1px solid var(--greyText);
+    border-radius: 8px;
+    font-size: var(--normalFontSize);
+    color: var(--blackColor);
+  }
+  
+  .input-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    color: var(--textColor);
+  }
+  
+  .button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    font-size: var(--normalFontSize);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .button:hover {
+    background-color: var(--HoverColor);
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .profile-container {
+        padding: 1.5rem;
+    }
+
+    .form-title {
+        font-size: var(--h3FontSize);
+    }
+
+    .social-button {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .social-button img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .separator span {
+        font-size: var(--smallFontSize);
+    }
+
+    .input-wrapper input {
+        padding: 0.8rem 2rem; /* Adjust padding */
+    }
+
+    .input-wrapper i {
+        left: 0.5rem; /* Adjust icon position */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-container {
+        padding: 1rem;
+    }
+
+    .form-title {
+        font-size: var(--h3FontSize);
+    }
+
+    .social-button {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .social-button img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .separator span {
+        font-size: var(--smallestFontSize);
+    }
+
+    .input-wrapper input {
+        padding: 0.8rem 2rem; /* Adjust padding */
+    }
+
+    .input-wrapper i {
+        left: 0.25rem; /* Adjust icon position */
+    }
+}

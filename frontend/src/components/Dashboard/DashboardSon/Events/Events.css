@@ -1,0 +1,66 @@
+:root {
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+    /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.section{
+  padding: 4rem 0 2rem;
+}
+
+.containerr{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.flexx{
+  display: flex;
+  align-items: center;
+}
+.gridd{
+  display: grid;
+  align-items: center;
+}
+.btnn{
+  padding: .6rem 1.5rem;
+  background: var(--paleGreen);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btnn a{
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.btnn:hover{
+  background: var(--HoverColor);
+}
+
+img, video{
+  width: 100%;
+  height: auto;
+}

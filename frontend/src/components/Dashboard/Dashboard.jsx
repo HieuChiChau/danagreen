@@ -2,7 +2,7 @@ import React from 'react'
 import './Dashboard.css'
 import SideBar from './SideBar Section/SideBar'
 import Body from './Body Section/Body'
-const App = () => {
+const Dashboard = () => {
   return (
     <div className='containers'>
       <SideBar/>
@@ -11,4 +11,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Dashboard

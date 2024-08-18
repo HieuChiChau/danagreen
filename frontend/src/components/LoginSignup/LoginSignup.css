@@ -1,3 +1,24 @@
+
+:root{
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
 .loginsignup{
     display: flex;
     flex-direction: column;
@@ -81,6 +102,35 @@
     font-weight: 700;
     cursor: pointer;
 }
+.option-login{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.login-button {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background: var(--whiteColor);
+    
+    box-shadow: 0 2px 10px var(--greyText);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+  }
+.login-button img{
+    width: 4rem;
+    height: 4rem;
+}
+.login-button:hover {
+    background: var(--greyText);
+}
+  
+.login-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
 .gray{
     background: #EAEAEA;
     color: #676767;

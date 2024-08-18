@@ -20,6 +20,7 @@
 }
 
 .topSection .headerSection {
+  margin-top: -50px;
   justify-content: space-between;
 }
 .topSection .headerSection .title h1 {
@@ -33,7 +34,7 @@
   font-weight: 500;
 }
 .topSection .headerSection .searchbar {
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   background: var(--whiteColor);
   border-radius: 5px;
   gap: 1rem;
@@ -72,6 +73,7 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  cursor: pointer;
 }
 .topSection .cardSection {
   margin-top: 3rem;
@@ -80,7 +82,7 @@
 .topSection .cardSection .rightCard {
   position: relative;
   flex-basis: 70%;
-  height: 200px;
+  height: 250px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -148,8 +150,8 @@
 .topSection .cardSection .leftCard .main::before {
   content: "";
   position: absolute;
-  height: 100%;
-  width: 80%;
+  height: 110%;
+  width: 130%;
   background: var(--paleGreen);
   left: 0;
   bottom: 0;
@@ -187,7 +189,8 @@
   transition: 0.3s ease;
 }
 .topSection .cardSection .leftCard .main .imgDiv {
-  transform: translateY(-20px);
+  transform: translateY(0px);
+  transform: translateX(36px);
 }
 .topSection .cardSection .leftCard .main .imgDiv img {
   width: 200px;

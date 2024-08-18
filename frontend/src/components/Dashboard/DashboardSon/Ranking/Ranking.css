@@ -1,0 +1,133 @@
+:root{
+  --PrimaryColor: hsl(94, 59%, 35%);
+  --HoverColor: #bdf094;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+.leaderboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-left: 200px;
+  padding-right: 200px;
+  border: 1px solid black;
+  
+}
+
+.leaderboard h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4CAF50;
+  font-size: 28px;
+  padding-top: 20px;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: separate; /* Thay đổi từ collapse sang separate */
+  border-spacing: 0 10px; /* Khoảng cách giữa các hàng */
+}
+
+.leaderboard th, .leaderboard td {
+  padding: 20px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.leaderboard th {
+  background-color: #f4f4f4;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: sticky;
+  top: 0;
+}
+
+.leaderboard tr {
+  transition: background-color 0.3s ease;
+}
+
+.leaderboard tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.leaderboard tr:hover {
+  background-color: #e0f7fa;
+}
+
+.leaderboard tr:nth-child(1) {
+  background-color: var(--PrimaryColor);
+  color: black;
+  font-weight: bold;
+}
+
+.leaderboard tr:nth-child(2) {
+  background-color: var(--HoverColor);
+  color: black;
+  font-weight: bold;
+}
+
+.leaderboard tr:nth-child(3) {
+  background-color: var(--paleGreen);
+  color: black;
+  font-weight: bold;
+}
+
+.leaderboard th, .leaderboard td {
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard th:first-child, .leaderboard td:first-child {
+  text-align: center;
+  width: 100px; /* Chiều rộng cho cột rank */
+}
+
+.leaderboard th:nth-child(2), .leaderboard td:nth-child(2) {
+  width: 300px; /* Chiều rộng cho cột name */
+}
+
+.leaderboard th:nth-child(3), .leaderboard td:nth-child(3) {
+  width: 150px; /* Chiều rộng cho cột score */
+  text-align: right;
+}
+
+
+/* Media Queries cho thiết bị di động */
+@media (max-width: 600px) {
+  .leaderboard {
+    padding: 0 20px; /* Thêm padding để bảng rộng hơn */
+  }
+
+  .leaderboard th, .leaderboard td {
+    padding: 12px 15px; /* Điều chỉnh padding để phù hợp với kích thước mới */
+    font-size: 14px; /* Tăng kích thước chữ để dễ đọc hơn */
+  }
+
+  .leaderboard th:first-child, .leaderboard td:first-child {
+    width: 25%; /* Điều chỉnh width cho cột rank */
+  }
+
+  .leaderboard th:nth-child(2), .leaderboard td:nth-child(2) {
+    width: 50%; /* Điều chỉnh width cho cột name */
+  }
+
+  .leaderboard th:nth-child(3), .leaderboard td:nth-child(3) {
+    width: 25%; /* Điều chỉnh width cho cột score */
+  }
+}

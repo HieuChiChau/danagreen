@@ -5,7 +5,6 @@ import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 
 //Import Images=====>
 import img1 from '../../../../assets/beer.png'
-import img2 from '../../../../assets/glass.png'
 import img3 from '../../../../assets/paper.png'
 import img4 from '../../../../assets/recycle.png'
 import user from '../../../../assets/user.jpg'
@@ -27,11 +26,6 @@ const Listing = () => {
           <AiFillHeart className='icon'/>
           <img src={img1} alt='Image Name'/>
           <h3>Beer</h3>
-        </div>
-        <div className='singleItem'>
-          <AiOutlineHeart className='icon'/>
-          <img src={img2} alt='Image Name'/>
-          <h3>Glass</h3>
         </div>
         <div className='singleItem'>
           <AiOutlineHeart className='icon'/>
