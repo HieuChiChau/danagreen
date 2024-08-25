@@ -9,7 +9,8 @@
     --bgColor: hsl(220, 10%, 94%);
     --greyText: rgb(190, 190, 190);
     --inputColor: hsl(330, 12%, 97%);
-
+    --whiteForTextRC :  hsla(98, 95%, 8%, 0.944);
+    --GreenForTextRC : hsla(123, 92%, 5%, 0.96);
     /* Font ang Typography */
     --biggestFontSize: 2.5rem;
     --h1FontSize: 1.5rem;
@@ -129,13 +130,13 @@
 
             h1{
                 font-size: var(--h1FontSize);
-                color: var(--whiteColor);
+                color: var(--whiteForTextRC);
                 font-weight: 800;
             }
 
             p{
                 padding: 1rem;
-                color: var(--paleGreen);
+                color: var(--GreenForTextRC);
                 font-weight: 500;
             }
 

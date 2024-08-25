@@ -21,7 +21,7 @@
 nav{
     width: 100%;
     /* background: #333; */
-    color: #fff;
+    color: #000000;
     padding: 4px 0;
     position: fixed;
     top: 0;
@@ -44,7 +44,7 @@ nav ul li{
     font-size: 16px;
 }
 .dark-nav{
-    background: #212EA0;
+    background: rgb(28, 187, 126);
     transition: 0.5s;
 }
 .menu-icon{
@@ -69,7 +69,7 @@ nav ul li{
         top: 0;
         right: 0px;
         bottom: 0;
-        background: #212EA0;
+        background: rgb(28, 187, 126);
         z-index: -1;
         width: 200px;
         padding-top: 70px;

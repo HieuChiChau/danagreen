@@ -41,7 +41,9 @@ const LoginSignup = () => {
         <div className='loginsignup'>
 
             <div className='header'>
-                <div className='text'>{action}</div>
+                <div className='text'>
+                    {action === 'Sign up' ? 'Đăng ký' : action === 'Login' ? 'Đăng nhập' : ''}
+                </div>
                 <div className='underline'></div>
             </div>
             
@@ -84,20 +86,20 @@ const LoginSignup = () => {
                     />
                 </div>
             </div>
-            {action === 'Sign up' ? <div></div> : <div className='forgot-password'>Lost Password? <span>Click here!</span></div>}
+            {action === 'Sign up' ? <div></div> : <div className='forgot-password'>Quên mật khẩu? <span>Nhấn tại đây!</span></div>}
 
             <div className='submit-container'>
                 <div 
                     className={action === 'Login' ? 'submit gray' : 'submit'}
                     onClick= {action === 'Sign up' ? handleRegister : () => { setAction('Sign up') }}
                 >
-                    Sign up
+                    Đăng ký
                 </div>
                 <div 
                     className={action === 'Sign up' ? 'submit gray' : 'submit'}
                     onClick= {action === 'Login' ? handleLogin : () => { setAction('Login') }}
                 >
-                    Login
+                    Đăng nhập
                 </div>
             </div>
         </div>
