@@ -135,7 +135,7 @@
             .cardInfo{
                 padding: 1rem;
                 .desTitile{
-                    color: var(--blackColor);
+                    color: var(--PrimaryColor);
                     font-size: 1.25rem;
                 }
                 .continent{
@@ -170,17 +170,18 @@
                             background: var(--PrimaryColor);
                             border-radius: 1rem;
                             color: var(--whiteColor);
-                            padding: 1px 10px;
+                            padding: 3px 10px;
                             font-size: 10px;
+                            margin-left: 10px;
                         }
                     }
                     .price{
-                        font-size: 1.1rem;
+                        font-size: 1.7rem;
                         color: var(--blackColor);
                     }
                 }
                 .desc{
-                    font-size: 13.5px;
+                    font-size: 15px;
                     color: var(--textColor);
                     font-weight: 500;
                 }

@@ -120,7 +120,7 @@ const Body = () => {
                                     </span>
                                     <div className='fees flexx'>
                                         <div className='grade'>
-                                            <span>{grade}<small>+1</small></span>
+                                            <span>{grade}<small> +1</small></span>
                                         </div>
                                         <div className='price'>
                                             <h5>{fees}</h5>

@@ -3,15 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import './SideBar.css'
 
 //Import Images====>
-import logo from '../../../assets/logo1.png'
+import logo from '../../../assets/dana_cut.png'
 
 //Import icons
 import { IoIosQrScanner, IoMdSpeedometer } from 'react-icons/io'
 import { MdEventAvailable } from 'react-icons/md'
 import { BsCreditCard2Front, BsQuestionCircle, BsTrophy } from 'react-icons/bs'
 import { FaUserEdit } from "react-icons/fa";
-import { RiLockPasswordLine } from "react-icons/ri";
+import { RiLockPasswordLine, RiLogoutBoxLine } from "react-icons/ri";
 import { LuHelpingHand } from "react-icons/lu";
+import { GoGift } from "react-icons/go";
+
 const SideBar = () => {
   const navigate = useNavigate()
   const handleQR=()=>{
@@ -24,7 +26,16 @@ const SideBar = () => {
     navigate('/ranking')
   }   
   const handleInfo = () => {
-    navigate('/profile'); // Chuyển hướng đến /dashboard/profile
+    navigate('/profile'); 
+  };
+  const handleHelper = () => {
+    navigate('/helper'); 
+  };
+  const handlePassword = () => {
+    navigate('/password'); 
+  };
+  const handleHistory = () => {
+    navigate('/history'); 
   };
   return (
     <div className='sideBar grid'>
@@ -74,6 +85,14 @@ const SideBar = () => {
               </span>
             </a>
           </li>
+          <li className='listItem' onClick={handleRanking}>
+            <a href='#' className='menuLink flex'>
+              <GoGift className='icon'/>
+              <span className='smallText'>
+                Voucher
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -93,7 +112,7 @@ const SideBar = () => {
             </a>
           </li>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={handlePassword}>
             <a href='#' className='menuLink flex'>
               <RiLockPasswordLine className='icon' />
               <span className='smallText'>
@@ -102,7 +121,7 @@ const SideBar = () => {
             </a>
           </li>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={handleHelper}>
             <a href='#' className='menuLink flex'>
               <LuHelpingHand className='icon'/>
               <span className='smallText'>
@@ -111,11 +130,20 @@ const SideBar = () => {
             </a>
           </li>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={handleHistory}>
             <a href='#' className='menuLink flex'>
               <BsCreditCard2Front className='icon'/>
               <span className='smallText'>
                 Lịch Sử
+              </span>
+            </a>
+          </li>
+
+          <li className='listItem'>
+            <a href='#' className='menuLink flex'>
+              <RiLogoutBoxLine className='icon'/>
+              <span className='smallText'>
+                Đăng xuất
               </span>
             </a>
           </li>

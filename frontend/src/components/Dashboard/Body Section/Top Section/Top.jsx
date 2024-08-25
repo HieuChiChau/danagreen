@@ -23,7 +23,7 @@ const Top = () => {
       <div className='headerSection flex'>
         <div className='title'>
           <h1>Welcome to DANAGreen.</h1>
-          <p>Hello Nguoi ban bida hay nhat hanh tinh, Welcome back!</p>
+          <p>Hello Hieu, Welcome back!</p>
         </div>
 
         <div className='searchbar flex'>
@@ -59,18 +59,18 @@ const Top = () => {
         <div className='leftCard flex'>
           <div className='main flex'>
             <div className='textDiv'>
-              <h1>My Award</h1>
+              <h1>Sự kiện của tôi</h1>
 
               <div className='flex'>
                 <span>
-                  Today <br/> <small>4 Orders</small>
+                  Hôm nay <br/> <small>2 sự kiện</small>
                 </span>
                 <span>
-                  This Month <br/> <small>20 Orders</small>
+                  Tháng này <br/> <small>20 sự kiện</small>
                 </span>
               </div>
               <span className='flex link'>
-                Go to my orders <BsArrowRightShort className='icon'/>
+                Xem <BsArrowRightShort className='icon'/>
               </span>
 
             </div>

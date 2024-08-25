@@ -55,7 +55,7 @@ const LoginSignup = () => {
                     </button>
                 </div> 
                 : <div className='input'>
-                    <img src={user_icon} alt='' />
+                    <img src={user_icon} alt='' className='login-icon'/>
                     <input 
                         type='text' 
                         placeholder='Tên người dùng' 
@@ -64,7 +64,7 @@ const LoginSignup = () => {
                         required />
                 </div>}
                 <div className='input'>
-                    <img src={email_icon} alt='' />
+                    <img src={email_icon} alt='' className='siuuuu'/>
                     <input
                         type='email'
                         placeholder='Email'
@@ -74,7 +74,7 @@ const LoginSignup = () => {
                     />
                 </div>
                 <div className='input'>
-                    <img src={password_icon} alt='' />
+                    <img src={password_icon} alt='' className='siuuuu'/>
                     <input
                         type='password'
                         placeholder='Password'

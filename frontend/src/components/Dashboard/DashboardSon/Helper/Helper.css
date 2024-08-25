@@ -1,0 +1,264 @@
+:root{
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+
+    /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.report-issue-containe {
+    max-width: 700px;
+    margin: auto;
+    padding: 10rem;
+    padding-top: 4rem;
+    background-color: var(--whiteColor);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--greyText);
+  }
+  
+  .report-issue-containe h1 {
+    text-align: center;
+    color: var(--blackColor);
+    font-size: 2rem;
+    padding-bottom: 4rem;
+  }
+  
+  .details-wrapper {
+    margin-bottom: 1.5rem;
+  }
+  
+  .details-wrapper label {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--blackColor);
+    font-size: 1.3rem;
+    padding-top: 2rem;
+  }
+  
+  .details-wrapper textarea {
+    width: 110%;
+    padding: 1rem;
+    border: 1px solid var(--greyText);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: var(--inputColor);
+    color: var(--blackColor);
+    transition: border-color 0.3s;
+  }
+  
+  .details-wrapper textarea:focus {
+    border-color: var(--PrimaryColor);
+    outline: none;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    
+  }
+  
+  .submit-button:hover {
+    background-color: var(--HoverColor);
+    transform: scale(1.02);
+    color: black;
+  }
+  .button-backkkk{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 2rem;
+  }
+  .button-backkkk:hover{
+    background-color: var(--HoverColor);
+    transform: scale(1.02);
+    color: black;
+  }
+/* Container for the list of radio buttons */
+.radio-list {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+  }
+  
+  /* Style for each radio item */
+  .radio-item {
+    margin-bottom: 1.3rem; /* Adjust the space between rows */
+  }
+  
+  /* Hide default radio button */
+  .radio-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Custom radio button style */
+  .radio-item input[type="radio"] + label {
+    position: relative;
+    padding-left: 3rem; /* Space for the custom radio button */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--blackColor);
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Create the custom radio button */
+  .radio-item input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--PrimaryColor);
+    border-radius: 2px; /* Make it a square with slightly rounded corners */
+    background-color: var(--whiteColor);
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Radio button checked state */
+  .radio-item input[type="radio"]:checked + label:before {
+    background-color: var(--PrimaryColor);
+    border-color: var(--PrimaryColor);
+  }
+  
+  /* Create the checkmark */
+  .radio-item input[type="radio"]:checked + label:after {
+    content: "✔";
+    position: absolute;
+    left: 0.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--whiteColor);
+    font-size: 1rem; /* Adjust the size of the checkmark */
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .report-issue-container {
+      padding: 2rem;
+    }
+  
+    .issue-item label {
+      font-size: var(--normalFontSize);
+    }
+  
+    .details-wrapper textarea {
+      padding: 0.75rem;
+    }
+  
+    .submit-button {
+      padding: 0.8rem;
+      font-size: var(--h3FontSize);
+    }
+    .button-backkkk{
+      padding: 0.8rem;
+      font-size: var(--h3FontSize);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .report-issue-container {
+      padding: 1.5rem;
+      max-width: 100%;
+    }
+  
+    .report-issue-container h1 {
+      font-size: var(--h1FontSize);
+    }
+  
+    .radio-item input[type="radio"] + label {
+      font-size: var(--normalFontSize);
+    }
+  
+    .details-wrapper textarea {
+      padding: 0.5rem;
+      font-size: var(--smallFontSize);
+    }
+  
+    .submit-button,
+    .button-backkkk {
+      padding: 0.6rem;
+      font-size: var(--smallFontSize);
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .report-issue-containe {
+      padding: 4rem;
+      max-width: 100%;
+      margin: auto;
+    }
+  
+    .report-issue-containe h1 {
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+    }
+  
+    .radio-item input[type="radio"] + label {
+      font-size: 1rem;
+      padding-left: 2rem; /* Adjust space for the custom radio button */
+    }
+  
+    .radio-item input[type="radio"] + label:before {
+      width: 1rem;
+      height: 1rem;
+    }
+  
+    .radio-item input[type="radio"]:checked + label:after {
+      font-size: 0.8rem; /* Adjust the size of the checkmark */
+    }
+  
+    .details-wrapper label {
+      font-size: 1rem;
+    }
+  
+    .details-wrapper textarea {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  
+    .submit-button {
+      padding: 0.75rem;
+      font-size: var(--normalFontSize);
+    }
+  
+    .button-backkkk {
+      padding: 0.75rem;
+      font-size: var(--normalFontSize);
+    }
+  }
+  
+  

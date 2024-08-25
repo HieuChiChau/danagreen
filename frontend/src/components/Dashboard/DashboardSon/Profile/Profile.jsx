@@ -20,7 +20,7 @@ const Profile = () => {
 
       <p className='separator'><span>Information</span></p>
 
-      <form action='#' className='profilr-form'>
+      <form action='#' className='profilee-form'>
         <div className='input-wrapper'>
           <input type='username' value='Chau Chi Hieu'/>
           <i className="material-symbols-rounded">person</i>

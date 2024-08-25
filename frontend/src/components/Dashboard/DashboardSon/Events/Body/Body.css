@@ -132,7 +132,7 @@
   padding: 1rem;
 }
 .main .secContent .singleDestination .cardInfo .desTitile {
-  color: var(--blackColor);
+  color: var(--PrimaryColor);
   font-size: 1.25rem;
 }
 .main .secContent .singleDestination .cardInfo .continent {
@@ -169,15 +169,16 @@
   background: var(--PrimaryColor);
   border-radius: 1rem;
   color: var(--whiteColor);
-  padding: 1px 10px;
+  padding: 3px 10px;
   font-size: 10px;
+  margin-left: 10px;
 }
 .main .secContent .singleDestination .cardInfo .fees .price {
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   color: var(--blackColor);
 }
 .main .secContent .singleDestination .cardInfo .desc {
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--textColor);
   font-weight: 500;
 }

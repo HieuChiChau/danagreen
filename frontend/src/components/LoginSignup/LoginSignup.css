@@ -122,6 +122,10 @@
     width: 4rem;
     height: 4rem;
 }
+.siuuuu{
+    width: 2rem;
+    height: 1.5rem;
+}
 .login-button:hover {
     background: var(--greyText);
 }

@@ -16,6 +16,9 @@ import Profile from './components/Dashboard/DashboardSon/Profile/Profile'
 import Ranking from './components/Dashboard/DashboardSon/Ranking/Ranking'
 import ShowQR from './components/Dashboard/DashboardSon/QR/ShowQR'
 import Events from './components/Dashboard/DashboardSon/Events/Events'
+import Helper from './components/Dashboard/DashboardSon/Helper/Helper'
+import Password from './components/Dashboard/DashboardSon/Password/Password'
+import History from './components/Dashboard/DashboardSon/History/History'
 const App = () => {
   
   const[playState, setPlayState] = useState(false)
@@ -49,6 +52,9 @@ const App = () => {
         <Route path='/events' element={<Events/>}/>
         <Route path='/ranking' element={<Ranking/>}/>
         <Route path='/qrcode' element={<ShowQR/>}/>
+        <Route path='/helper' element={<Helper/>}/>
+        <Route path='/password' element={<Password/>}/>
+        <Route path='/history' element={<History/>}/>
       </Routes>
     </Router>
   )
