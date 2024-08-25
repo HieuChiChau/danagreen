@@ -41,8 +41,8 @@ const Profile = () => {
           <input type='username' value='Da Nang'/>
           <i className="material-symbols-rounded">apartment</i>        
         </div>
-        <button className='button'>Save</button>
-        <button className='button' onClick={handleBackClick}>Back</button>
+        <button className='button'>Cập nhật</button>
+        <button className='button' onClick={handleBackClick}>Quay lại</button>
       </form>
     </div>
   )

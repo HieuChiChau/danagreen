@@ -22,12 +22,12 @@ const Top = () => {
     <div className='topSection'>
       <div className='headerSection flex'>
         <div className='title'>
-          <h1>Welcome to DANAGreen.</h1>
-          <p>Hello Hieu, Welcome back!</p>
+          <h1>Chào mừng đến với DANAGreen!</h1>
+          <p>Xin chào HieuChau, rất vui được gặp lại!</p>
         </div>
 
         <div className='searchbar flex'>
-          <input type='text' placeholder='Search ...'/>
+          <input type='text' placeholder='Tìm kiếm ...'/>
           <BiSearchAlt className='icon'/>
         </div>
 
@@ -43,8 +43,8 @@ const Top = () => {
       <div className='cardSection flex'>
 
         <div className='rightCard flex'>
-          <h1>Create and sell axtraordinary products</h1>
-          <p>The worlds flast growing your skill in natural bullards!</p>
+          <h1>DANaGreen: Giải pháp cho một Hành tinh Xanh</h1>
+          <p>DANaGreen sẽ thay đổi cách quản lý rác thải thông qua công nghệ!</p>
 
           <div className='buttons flex'>
             <button className='btn'>Quét Mã</button>
@@ -70,7 +70,7 @@ const Top = () => {
                 </span>
               </div>
               <span className='flex link'>
-                Xem <BsArrowRightShort className='icon'/>
+                Xem tất cả <BsArrowRightShort className='icon'/>
               </span>
 
             </div>
@@ -85,9 +85,9 @@ const Top = () => {
                 <div className='circle1'></div>
                 <div className='circle2'></div>
 
-                <h3>Help Center</h3>
-                <p>Having trouble in DANAGreen, please contact us from for more questions.</p>
-                <button className='btn'>Go to help center</button>
+                <h3>Hướng dẫn sử dụng</h3>
+                <p>Nếu bạn chưa biết cách sử dụng DANAGreen. Hãy đọc ngay hướng dẫn sử dụng.</p>
+                <button className='btn'>Đọc hướng dẫn</button>
               </div>
             </div>
           </div>

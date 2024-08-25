@@ -31,7 +31,7 @@ const App = () => {
             <Navbar/>
             <Hero/>
             <div className='container'>
-              <Title subTitle='Đại lý thương hiệu của chúng tôi' title='Các Idol'/>
+              <Title subTitle='Đại diện thương hiệu của chúng tôi' title='Các influencer'/>
               <Programs/>
               <About setPlayState={setPlayState}/>
               <Title subTitle='Thùng rác thông minh DANAGreen' title='Hình ảnh sản phẩm'/>

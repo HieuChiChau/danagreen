@@ -27,8 +27,8 @@ const Password = () => {
           <input type='password' value='123123123'/>
           <i className="material-symbols-rounded">Lock_Clock</i>        
         </div>
-        <button className='button'>Save</button>
-        <button className='button' onClick={handleBackClick}>Back</button>
+        <button className='button'>Cập nhật</button>
+        <button className='button' onClick={handleBackClick}>Quay lại</button>
       </form>
     </div>
   )

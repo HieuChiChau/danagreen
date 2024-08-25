@@ -156,9 +156,9 @@ const SideBar = () => {
           <div className='circle1'></div>
           <div className='circle2'></div>
 
-          <h3>Help Center</h3>
-          <p>Having trouble in DANAGreen, please contact us from for more questions.</p>
-          <button className='btn'>Go to help center</button>
+          <h3>Hướng dẫn sử dụng</h3>
+          <p>Nếu bạn chưa biết cách sử dụng DANAGreen. Hãy đọc ngay hướng dẫn sử dụng.</p>
+          <button className='btn'>Đọc hướng dẫn</button>
         </div>
       </div>
     </div>

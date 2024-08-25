@@ -10,9 +10,9 @@ const Activity = () => {
   return (
     <div className='activitySection'>
       <div className='heading flex'>
-        <h1>Recent Activity</h1>
+        <h1>Hoạt động gần đây</h1>
         <button className='btn'>
-          See All
+          Chi tiết
           <BsArrowRightShort className='icon'/>
         </button>
       </div>
@@ -22,54 +22,65 @@ const Activity = () => {
         <div className='singleCustomer flex'>
           <img src={img} alt='Customer Image'/>
           <div className='customerDetails'>
-            <span className='name'>Hieu</span>
-            <small>Ordered a new plant</small>
+            <span className='name'>HieuChau</span>
+            <small>Tích được 19 điểm</small>
           </div>
           <div className='duration'>
-            2 mins ago
+            2 phút trước
           </div>
         </div>
         <div className='singleCustomer flex'>
           <img src={img} alt='Customer Image'/>
           <div className='customerDetails'>
-            <span className='name'>Hieu</span>
-            <small>Ordered a new plant</small>
+            <span className='name'>TuanPhan123</span>
+            <small>Tích được 7 điểm</small>
           </div>
           <div className='duration'>
-            2 mins ago
+            3 phút trước
           </div>
         </div>
         <div className='singleCustomer flex'>
           <img src={img} alt='Customer Image'/>
           <div className='customerDetails'>
-            <span className='name'>Hieu</span>
-            <small>Ordered a new plant</small>
+            <span className='name'>NhatTran2408</span>
+            <small>Tích được 5 điểm</small>
           </div>
           <div className='duration'>
-            2 mins ago
+            3 phút trước
           </div>
         </div>
         <div className='singleCustomer flex'>
           <img src={img} alt='Customer Image'/>
           <div className='customerDetails'>
-            <span className='name'>Hieu</span>
-            <small>Ordered a new plant</small>
+            <span className='name'>HieuAdam</span>
+            <small>Tích được 11 điểm</small>
           </div>
           <div className='duration'>
-            2 mins ago
+            4 phút trước
           </div>
         </div>
         <div className='singleCustomer flex'>
           <img src={img} alt='Customer Image'/>
           <div className='customerDetails'>
-            <span className='name'>Hieu</span>
-            <small>Ordered a new plant</small>
+            <span className='name'>TrinhTran</span>
+            <small>Tích được 4 điểm</small>
           </div>
           <div className='duration'>
-            2 mins ago
+            5 phút trước
+          </div>
+        </div>
+        <div className='singleCustomer flex'>
+          <img src={img} alt='Customer Image'/>
+          <div className='customerDetails'>
+            <span className='name'>MaiAnh</span>
+            <small>Tích được 7 điểm</small>
+          </div>
+          <div className='duration'>
+            5 phút trước
           </div>
         </div>
         
+
       </div>
     </div>
   )
