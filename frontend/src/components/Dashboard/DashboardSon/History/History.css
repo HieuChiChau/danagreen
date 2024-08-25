@@ -59,6 +59,31 @@
     color: black;
   }
 
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .pagination button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination button.active {
+    background-color: var(--HoverColor);
+  }
+  
+  .pagination button:hover {
+    background-color: var(--HoverColor);
+  }
+  
   @media screen and (max-width: 450px) {
     .trash-history-container {
       padding-right: 1rem;
