@@ -19,42 +19,46 @@ import Events from './components/Dashboard/DashboardSon/Events/Events'
 import Helper from './components/Dashboard/DashboardSon/Helper/Helper'
 import Password from './components/Dashboard/DashboardSon/Password/Password'
 import History from './components/Dashboard/DashboardSon/History/History'
+import Voucher from './components/Dashboard/DashboardSon/Voucher/Voucher'
+import MyVoucher from './components/Dashboard/DashboardSon/Voucher/MyVoucher'
 const App = () => {
-  
-  const[playState, setPlayState] = useState(false)
-  
+
+  const [playState, setPlayState] = useState(false)
+
   return (
     <Router>
       <Routes>
         <Route path='/' element={
           <div>
-            <Navbar/>
-            <Hero/>
+            <Navbar />
+            <Hero />
             <div className='container'>
-              <Title subTitle='Đại diện thương hiệu của chúng tôi' title='Các influencer'/>
-              <Programs/>
-              <About setPlayState={setPlayState}/>
-              <Title subTitle='Thùng rác thông minh DANAGreen' title='Hình ảnh sản phẩm'/>
-              <Product/>
-              <Title subTitle='Trải nghiệm' title='Người dùng nói gì về DANAGreen?'/>
-              <Testimonials/>
-              <Title subTitle='Đăng nhập/ Đăng ký' title='Tham gia cùng chúng tôi'/>
-              <LoginSignup/>
-              <Title subTitle='Góp ý' title='Liên hệ với chúng tôi'/>
-              <Contact/>
-              <Footer/>
+              <Title subTitle='Đại diện thương hiệu của chúng tôi' title='Các influencer' />
+              <Programs />
+              <About setPlayState={setPlayState} />
+              <Title subTitle='Thùng rác thông minh DANAGreen' title='Hình ảnh sản phẩm' />
+              <Product />
+              <Title subTitle='Trải nghiệm' title='Người dùng nói gì về DANAGreen?' />
+              <Testimonials />
+              <Title subTitle='Đăng nhập/ Đăng ký' title='Tham gia cùng chúng tôi' />
+              <LoginSignup />
+              <Title subTitle='Góp ý' title='Liên hệ với chúng tôi' />
+              <Contact />
+              <Footer />
             </div>
-            <VideoPlayer playState={playState} setPlayState={setPlayState}/>
+            <VideoPlayer playState={playState} setPlayState={setPlayState} />
           </div>
-        }/>
-        <Route path='/dashboard' element={<Dashboard/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/events' element={<Events/>}/>
-        <Route path='/ranking' element={<Ranking/>}/>
-        <Route path='/qrcode' element={<ShowQR/>}/>
-        <Route path='/helper' element={<Helper/>}/>
-        <Route path='/password' element={<Password/>}/>
-        <Route path='/history' element={<History/>}/>
+        } />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/events' element={<Events />} />
+        <Route path='/ranking' element={<Ranking />} />
+        <Route path='/qrcode' element={<ShowQR />} />
+        <Route path='/helper' element={<Helper />} />
+        <Route path='/password' element={<Password />} />
+        <Route path='/history' element={<History />} />
+        <Route path='/voucher' element={<Voucher />} />
+        <Route path='/myvoucher' element={<MyVoucher />} />
       </Routes>
     </Router>
   )

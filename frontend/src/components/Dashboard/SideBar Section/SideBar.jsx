@@ -15,32 +15,13 @@ import { LuHelpingHand } from "react-icons/lu";
 import { GoGift } from "react-icons/go";
 
 const SideBar = () => {
+
   const navigate = useNavigate()
-  const handleQR=()=>{
-    navigate('/qrcode')
-  }  
-  const handleEvents=()=>{
-    navigate('/events')
-  }
-  const handleRanking=()=>{
-    navigate('/ranking')
-  }   
-  const handleInfo = () => {
-    navigate('/profile'); 
-  };
-  const handleHelper = () => {
-    navigate('/helper'); 
-  };
-  const handlePassword = () => {
-    navigate('/password'); 
-  };
-  const handleHistory = () => {
-    navigate('/history'); 
-  };
+
   return (
     <div className='sideBar grid'>
       <div className='logoDiv flex'>
-        <img src={logo} alt='Image Name'/>
+        <img src={logo} alt='Image Name' />
         <h2>DANAGreen.</h2>
       </div>
 
@@ -52,42 +33,42 @@ const SideBar = () => {
 
           <li className='listItem'>
             <a href='#' className='menuLink flex'>
-              <IoMdSpeedometer className='icon'/>
+              <IoMdSpeedometer className='icon' />
               <span className='smallText'>
                 Trang Chủ
               </span>
             </a>
           </li>
 
-          <li className='listItem' onClick={handleQR}>
+          <li className='listItem' onClick={() => navigate('/qrcode')}>
             <a href='#' className='menuLink flex'>
-              <IoIosQrScanner className='icon'/>
+              <IoIosQrScanner className='icon' />
               <span className='smallText'>
                 Quét QR
               </span>
             </a>
           </li>
 
-          <li className='listItem' onClick={handleEvents}>
+          <li className='listItem' onClick={() => navigate('/events')}>
             <a href='#' className='menuLink flex'>
-              <MdEventAvailable className='icon'/>
+              <MdEventAvailable className='icon' />
               <span className='smallText'>
                 Sự Kiện
               </span>
             </a>
           </li>
 
-          <li className='listItem' onClick={handleRanking}>
+          <li className='listItem' onClick={() => navigate('/ranking')}>
             <a href='#' className='menuLink flex'>
-              <BsTrophy className='icon'/>
+              <BsTrophy className='icon' />
               <span className='smallText'>
                 Xếp Hạng
               </span>
             </a>
           </li>
-          <li className='listItem' onClick={handleRanking}>
+          <li className='listItem' onClick={() => navigate('/voucher')}>
             <a href='#' className='menuLink flex'>
-              <GoGift className='icon'/>
+              <GoGift className='icon' />
               <span className='smallText'>
                 Voucher
               </span>
@@ -103,16 +84,16 @@ const SideBar = () => {
         </h3>
         <ul className='menuLists grid'>
 
-          <li className='listItem' onClick={handleInfo}>
+          <li className='listItem' onClick={() => navigate('/profile')}>
             <a href='#' className='menuLink flex'>
-              <FaUserEdit className='icon'/>
+              <FaUserEdit className='icon' />
               <span className='smallText'>
                 Thông Tin
               </span>
             </a>
           </li>
 
-          <li className='listItem' onClick={handlePassword}>
+          <li className='listItem' onClick={() => navigate('/password')}>
             <a href='#' className='menuLink flex'>
               <RiLockPasswordLine className='icon' />
               <span className='smallText'>
@@ -121,27 +102,27 @@ const SideBar = () => {
             </a>
           </li>
 
-          <li className='listItem' onClick={handleHelper}>
+          <li className='listItem' onClick={() => navigate('/helper')}>
             <a href='#' className='menuLink flex'>
-              <LuHelpingHand className='icon'/>
+              <LuHelpingHand className='icon' />
               <span className='smallText'>
                 Hỗ Trợ
               </span>
             </a>
           </li>
 
-          <li className='listItem' onClick={handleHistory}>
+          <li className='listItem' onClick={() => navigate('/history')}>
             <a href='#' className='menuLink flex'>
-              <BsCreditCard2Front className='icon'/>
+              <BsCreditCard2Front className='icon' />
               <span className='smallText'>
                 Lịch Sử
               </span>
             </a>
           </li>
 
-          <li className='listItem'>
+          <li className='listItem' onClick={() => navigate('/')}>
             <a href='#' className='menuLink flex'>
-              <RiLogoutBoxLine className='icon'/>
+              <RiLogoutBoxLine className='icon' />
               <span className='smallText'>
                 Đăng xuất
               </span>
@@ -151,7 +132,7 @@ const SideBar = () => {
       </div>
 
       <div className='sideBarCard'>
-        <BsQuestionCircle className='icon'/>
+        <BsQuestionCircle className='icon' />
         <div className='cardContent'>
           <div className='circle1'></div>
           <div className='circle2'></div>
@@ -162,7 +143,7 @@ const SideBar = () => {
         </div>
       </div>
     </div>
-    
+
   )
 }
 

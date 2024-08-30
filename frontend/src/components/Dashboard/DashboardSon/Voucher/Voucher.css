@@ -1,0 +1,237 @@
+:root {
+    --PrimaryColor: hsl(94, 59%, 35%);
+    --HoverColor: #bdf094;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.voucher-list-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+    background-color: var(--whiteColor);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--greyText);
+}
+
+.voucher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative; /* Để căn chỉnh chính xác vị trí của tiêu đề và nút */
+}
+
+.voucher-list-title {
+    font-size: var(--h1FontSize);
+    margin: 0;
+    text-align: center;
+    flex: 1; /* Cho phép tiêu đề mở rộng để chiếm không gian */
+}
+
+.my-voucher-button {
+    padding: 6px 12px; /* Kích thước nút nhỏ gọn */
+    border: none;
+    border-radius: 6px;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    font-size: var(--smallFontSize);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.my-voucher-button:hover {
+    background-color: var(--HoverColor);
+    color: black;
+}
+
+.voucher-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.voucher-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: var(--whiteColor);
+    box-shadow: 0 4px 12px var(--greyText);
+}
+
+.voucher-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.voucher-divider {
+    width: 4px;
+    height: 150px;
+    margin: 0 20px;
+    border-left: 2px dashed var(--blackColor);
+}
+
+.voucher-info {
+    flex: 1;
+}
+
+.voucher-title {
+    font-size: var(--h2FontSize);
+    margin: 0;
+}
+
+.voucher-description {
+    font-size: var(--normalFontSize); /* Sử dụng biến font-size */
+    margin: 10px 0;
+}
+
+.voucher-expiry-date {
+    color: var(--textColor); /* Sử dụng biến màu văn bản */
+    font-size: var(--smallFontSize); /* Sử dụng biến font-size */
+}
+
+.voucher-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.use-voucher-button, .copy-code-button {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 6px; /* Tăng border-radius của nút */
+    color: var(--whiteColor); /* Sử dụng biến màu chữ */
+    cursor: pointer;
+    font-size: var(--normalFontSize); /* Sử dụng biến font-size */
+}
+
+.use-voucher-button {
+    background-color: var(--PrimaryColor); /* Sử dụng biến màu nền */
+}
+
+.copy-code-button {
+    background-color: var(--textColor); /* Sử dụng biến màu nền */
+}
+.bakk{
+    text-align: center;
+}
+.bakkk{
+    width: 70%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .voucher-card {
+        padding: 10px; /* Giảm padding bên trong */
+    }
+
+    .voucher-image {
+        width: 150px; /* Giảm chiều rộng hình ảnh */
+        height: 120px; /* Giảm chiều cao hình ảnh */
+    }
+
+    .voucher-divider {
+        height: 120px; /* Điều chỉnh chiều cao phân cách để khớp với kích thước mới của hình ảnh */
+        border-left: 1px dashed var(--blackColor);
+    }
+
+    .voucher-title {
+        font-size: var(--h3FontSize); /* Giảm kích thước font tiêu đề */
+    }
+
+    .voucher-description {
+        font-size: var(--smallFontSize); /* Giảm kích thước font mô tả */
+    }
+
+    .voucher-expiry-date {
+        font-size: var(--smallestFontSize); /* Giảm kích thước font hạn sử dụng */
+    }
+
+    .use-voucher-button,
+    .copy-code-button {
+        padding: 8px 12px; /* Giảm kích thước padding của các nút */
+        font-size: var(--smallFontSize); /* Giảm kích thước font của các nút */
+    }
+
+    .bakkk {
+        width: 80%; /* Đặt chiều rộng nút trở lại nhỏ hơn để phù hợp với màn hình nhỏ */
+        font-size: 1.2rem; /* Giảm kích thước font cho nút "Trở Lại" */
+    }
+    .my-voucher-button {
+        padding: 4px 8px; /* Thu nhỏ kích thước nút */
+        font-size: var(--smallestFontSize); /* Kích thước font nhỏ hơn */
+        margin-top: 10px; /* Thêm khoảng cách trên nút */
+    }
+}
+@media (max-width: 400px) {
+    .voucher-card {
+        padding: 8px; /* Giảm padding bên trong hơn nữa */
+    }
+
+    .voucher-image {
+        width: 120px; /* Giảm chiều rộng hình ảnh */
+        height: 90px; /* Giảm chiều cao hình ảnh */
+    }
+
+    .voucher-divider {
+        height: 90px; /* Điều chỉnh chiều cao phân cách để khớp với kích thước mới của hình ảnh */
+        border-left: 1px dashed var(--blackColor);
+    }
+
+    .voucher-title {
+        font-size: var(--smallFontSize); /* Giảm kích thước font tiêu đề để phù hợp với màn hình nhỏ hơn */
+    }
+
+    .voucher-description {
+        font-size: var(--smallestFontSize); /* Giảm kích thước font mô tả để phù hợp với màn hình nhỏ hơn */
+    }
+
+    .voucher-expiry-date {
+        font-size: var(--smallestFontSize); /* Giảm kích thước font hạn sử dụng */
+    }
+
+    .use-voucher-button,
+    .copy-code-button {
+        padding: 6px 10px; /* Giảm kích thước padding của các nút */
+        font-size: var(--smallestFontSize); /* Giảm kích thước font của các nút */
+    }
+
+    .bakkk {
+        width: 90%; /* Đặt chiều rộng nút về 90% để phù hợp với màn hình nhỏ hơn */
+        font-size: 1rem; /* Giảm kích thước font cho nút "Trở Lại" */
+    }
+    .my-voucher-button {
+        padding: 3px 6px; /* Kích thước nút còn nhỏ hơn cho màn hình rất nhỏ */
+        font-size: var(--smallestFontSize); /* Kích thước font nhỏ nhất */
+    }
+}
+
+

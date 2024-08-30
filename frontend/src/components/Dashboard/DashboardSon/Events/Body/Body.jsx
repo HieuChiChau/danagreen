@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Body.css'
 import video from '../../../../../assets/eventvid.mp4'
@@ -13,7 +13,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { BiCommentDetail } from "react-icons/bi";
 import { TiArrowBackOutline } from "react-icons/ti";
 
-const Data=[
+const Data = [
     {
         id: 1,
         imgSrc: img1,
@@ -68,78 +68,156 @@ const Data=[
         fees: 'Vật Tư',
         description: "Thấu hiểu nỗi lo này, với tinh thần “lá lành đùm lá rách”, mỗi dịp Tết đến, Xuân về, CODEDECO cùng với khách hàng phát động chiến dịch để đóng góp một chút tấm lòng nhỏ bé để phần nào giúp những người có hoàn cảnh khó khăn có một cái Tết vui vẻ, ấm áp hơn."
     },
+    {
+        id: 7,
+        imgSrc: img6,
+        destTitle: 'Tết Ấm Vùng Cao',
+        location: 'Yên Bái',
+        grade: 'Quyên Góp',
+        fees: 'Vật Tư',
+        description: "Thấu hiểu nỗi lo này, với tinh thần “lá lành đùm lá rách”, mỗi dịp Tết đến, Xuân về, CODEDECO cùng với khách hàng phát động chiến dịch để đóng góp một chút tấm lòng nhỏ bé để phần nào giúp những người có hoàn cảnh khó khăn có một cái Tết vui vẻ, ấm áp hơn."
+    },
+    {
+        id: 8,
+        imgSrc: img6,
+        destTitle: 'Tết Ấm Vùng Cao',
+        location: 'Yên Bái',
+        grade: 'Quyên Góp',
+        fees: 'Vật Tư',
+        description: "Thấu hiểu nỗi lo này, với tinh thần “lá lành đùm lá rách”, mỗi dịp Tết đến, Xuân về, CODEDECO cùng với khách hàng phát động chiến dịch để đóng góp một chút tấm lòng nhỏ bé để phần nào giúp những người có hoàn cảnh khó khăn có một cái Tết vui vẻ, ấm áp hơn."
+    },
+    {
+        id: 9,
+        imgSrc: img6,
+        destTitle: 'Tết Ấm Vùng Cao',
+        location: 'Yên Bái',
+        grade: 'Quyên Góp',
+        fees: 'Vật Tư',
+        description: "Thấu hiểu nỗi lo này, với tinh thần “lá lành đùm lá rách”, mỗi dịp Tết đến, Xuân về, CODEDECO cùng với khách hàng phát động chiến dịch để đóng góp một chút tấm lòng nhỏ bé để phần nào giúp những người có hoàn cảnh khó khăn có một cái Tết vui vẻ, ấm áp hơn."
+    },
+    {
+        id: 10,
+        imgSrc: img6,
+        destTitle: 'Tết Ấm Vùng Cao',
+        location: 'Yên Bái',
+        grade: 'Quyên Góp',
+        fees: 'Vật Tư',
+        description: "Thấu hiểu nỗi lo này, với tinh thần “lá lành đùm lá rách”, mỗi dịp Tết đến, Xuân về, CODEDECO cùng với khách hàng phát động chiến dịch để đóng góp một chút tấm lòng nhỏ bé để phần nào giúp những người có hoàn cảnh khó khăn có một cái Tết vui vẻ, ấm áp hơn."
+    },
+    {
+        id: 11,
+        imgSrc: img6,
+        destTitle: 'Tết Ấm Vùng Cao',
+        location: 'Yên Bái',
+        grade: 'Quyên Góp',
+        fees: 'Vật Tư',
+        description: "Thấu hiểu nỗi lo này, với tinh thần “lá lành đùm lá rách”, mỗi dịp Tết đến, Xuân về, CODEDECO cùng với khách hàng phát động chiến dịch để đóng góp một chút tấm lòng nhỏ bé để phần nào giúp những người có hoàn cảnh khó khăn có một cái Tết vui vẻ, ấm áp hơn."
+    },
+    {
+        id: 12,
+        imgSrc: img6,
+        destTitle: 'Tết Ấm Vùng Cao',
+        location: 'Yên Bái',
+        grade: 'Quyên Góp',
+        fees: 'Vật Tư',
+        description: "Thấu hiểu nỗi lo này, với tinh thần “lá lành đùm lá rách”, mỗi dịp Tết đến, Xuân về, CODEDECO cùng với khách hàng phát động chiến dịch để đóng góp một chút tấm lòng nhỏ bé để phần nào giúp những người có hoàn cảnh khó khăn có một cái Tết vui vẻ, ấm áp hơn."
+    },
 ]
 const Body = () => {
-    const navigate = useNavigate()
-    const handleBackClick = () => {
-      navigate('/dashboard');
+    const navigate = useNavigate();
+    const [currentPage, setCurrentPage] = useState(1);
+    const recordsPerPage = 6;
+
+    // Tính tổng số trang dựa trên số lượng phần tử trong Data
+    const totalPages = Math.ceil(Data.length / recordsPerPage);
+
+    // Lấy các phần tử của trang hiện tại
+    const currentRecords = Data.slice(
+        (currentPage - 1) * recordsPerPage,
+        currentPage * recordsPerPage
+    );
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
     };
-  return (
 
-    <>
-     {/* Thêm logo và header ở đây */}
-        <section className='home'>
-            <div className='overplay'></div>
-            <video src={video} muted autoPlay loop type='video/mp4'></video>
+    return (
+        <>
+            <section className='home'>
+                <div className='overlay'></div>
+                <video src={video} muted autoPlay loop type='video/mp4'></video>
 
-            <div className='homeContent Containerr'>
-                <div className='textDiv'>
-                    <span className='smallText'>
-                        DANAGreen
-                    </span>
-                    <h1 className='homeTitle'>
-                        DANH SÁCH SỰ KIỆN
-                    </h1>
-                </div>
+                <div className='homeContent Containerr'>
+                    <div className='textDiv'>
+                        <span className='smallText'>
+                            DANAGreen
+                        </span>
+                        <h1 className='homeTitle'>
+                            DANH SÁCH SỰ KIỆN
+                        </h1>
+                    </div>
 
-                <div className='cardDiv gridd'>
-                    <div className='destinationInput'>
-                        <label htmlFor='city'>Hãy Tham Gia Cùng Chúng Tôi</label>
+                    <div className='cardDiv gridd'>
+                        <div className='destinationInput'>
+                            <label htmlFor='city'>Hãy Tham Gia Cùng Chúng Tôi</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section className='main containerr section'>
-            <div className='secTitle'>
-                <h3 className='title'>Sự Kiện Gần Đây</h3>
-            </div>
-            <div className='secContent gridd'>
-                {
-                    Data.map((item)=>{
-                        const { id, imgSrc, destTitle, location, grade, fees, description } = item;
-                        return(
-                            <div key={id} className='singleDestination'>
-                                <div className='imageDiv'>
-                                    <img src={imgSrc} alt={destTitle}/>
-                                </div>
-                                <div className='cardInfo'>
-                                    <h4 className='desTitile'>{destTitle}</h4>
-                                    <span className='continent flexx'>
-                                        <CiLocationOn className='icon'/>
-                                        <span className='name'>{location}</span>
-                                    </span>
-                                    <div className='fees flexx'>
-                                        <div className='grade'>
-                                            <span>{grade}<small> +1</small></span>
-                                        </div>
-                                        <div className='price'>
-                                            <h5>{fees}</h5>
-                                        </div>
+            </section>
+            <section className='main containerr section'>
+                <div className='secTitle'>
+                    <h3 className='title'>Sự Kiện Gần Đây</h3>
+                </div>
+                <div className='secContent gridd'>
+                    {currentRecords.length > 0 ? (
+                        currentRecords.map((item) => {
+                            const { id, imgSrc, destTitle, location, grade, fees, description } = item;
+                            return (
+                                <div key={id} className='singleDestination'>
+                                    <div className='imageDiv'>
+                                        <img src={imgSrc} alt={destTitle} />
                                     </div>
-                                    <div className='desc'>
-                                        <p>{description}</p>
+                                    <div className='cardInfo'>
+                                        <h4 className='desTitile'>{destTitle}</h4>
+                                        <span className='continent flexx'>
+                                            <CiLocationOn className='icon' />
+                                            <span className='name'>{location}</span>
+                                        </span>
+                                        <div className='fees flexx'>
+                                            <div className='grade'>
+                                                <span>{grade}<small> +1</small></span>
+                                            </div>
+                                            <div className='price'>
+                                                <h5>{fees}</h5>
+                                            </div>
+                                        </div>
+                                        <div className='desc'>
+                                            <p>{description}</p>
+                                        </div>
+                                        <button className='btnn flexx'>THAM GIA <BiCommentDetail className='icon' /></button>
                                     </div>
-                                    <button className='btnn flexx'>THAM GIA <BiCommentDetail className='icon'/></button>
                                 </div>
-                            </div>
-                        )
-                    })
-                }
+                            );
+                        })
+                    ) : (
+                        <p>Không có sự kiện nào để hiển thị.</p>
+                    )}
+                </div>
+            </section>
+            <div className="pagination">
+                {Array.from({ length: totalPages }, (_, index) => (
+                    <button
+                        key={index + 1}
+                        onClick={() => handlePageChange(index + 1)}
+                        className={currentPage === index + 1 ? 'active' : ''}
+                    >
+                        {index + 1}
+                    </button>
+                ))}
             </div>
-        </section>
-        <button className='btnn back' onClick={handleBackClick}><p><TiArrowBackOutline  className='icon-back'/>Trở Lại</p></button>
-    </>
-  )
-}
+            <button className='btnn back' onClick={() => navigate('/dashboard')}><p><TiArrowBackOutline className='icon-back' />Trở Lại</p></button>
+        </>
+    );
+};
 
-export default Body
+export default Body;
