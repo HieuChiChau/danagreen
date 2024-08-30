@@ -139,4 +139,7 @@
   .listingSection .sellers .card {
     flex-direction: row;
   }
+  .listingSection .singleItem {
+    width: 250px !important;
+  }
 }/*# sourceMappingURL=Listing.css.map */

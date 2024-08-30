@@ -89,3 +89,12 @@
         font-size: 12px;
     }
 }
+@media (max-width: 450px){
+    .slide p{
+        text-align: center;
+        width: 420px;
+        padding-left: 55px;
+
+    }
+}
+ 

@@ -1,4 +1,4 @@
-:root{
+:root {
     --PrimaryColor: hsl(94, 59%, 35%);
     --HoverColor: #bdf094;
     --paleGreen: hsl(96, 75%, 89%);
@@ -18,11 +18,12 @@
     --smallFontSize: .813rem;
     --smallestFontSize: .75rem;
 }
-nav{
+
+nav {
     width: 100%;
     /* background: #333; */
     color: #000000;
-    padding: 4px 0;
+    padding: 2px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,40 +32,44 @@ nav{
     justify-content: space-between;
     z-index: 10;
 }
-.logo{
+
+.logo {
     width: 180px;
 }
+
 /* .cccccc{
     height: 50px;
 } */
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 5px 20px;
     font-size: 16px;
 }
-.dark-nav{
+
+.dark-nav {
     background: rgb(28, 187, 126);
     transition: 0.5s;
+    height: 100px;
 }
-.menu-icon{
+
+.menu-icon {
     display: none;
 }
+
 /* --------- media query --------- */
 
-@media (max-width: 1000px){
-    .logo{
-        width: 140px;
+
+@media (max-width: 1000px) {
+    .logo {
+        width: 90px;
     }
-    nav ul li{
-        margin: 10px 15px;
-    }
-}
-@media (max-width: 1000px){
-    nav{
+
+    nav {
         padding: 15px 0;
     }
-    nav ul{
+
+    nav ul {
         position: fixed;
         top: 0;
         right: 0px;
@@ -75,17 +80,37 @@ nav ul li{
         padding-top: 70px;
         transition: 0.5s;
     }
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 25px 40px;
     }
-    .menu-icon{
+
+    .menu-icon {
         display: block;
         width: 30px;
         cursor: pointer;
     }
-    .hide-mobile-menu{
+
+    .hide-mobile-menu {
         right: -200px;
     }
 }
 
+@media (max-width: 450px) {
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(28, 187, 126);
+        z-index: -1;
+        width: 190px;
+        padding-top: 70px;
+        transition: 0.5s;
+    }
+
+    .dark-nav {
+        height: 60px;
+    }
+}

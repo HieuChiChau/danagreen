@@ -10,17 +10,17 @@ const Activity = () => {
   return (
     <div className='activitySection'>
       <div className='heading flex'>
-        <h1>Hoạt động gần đây</h1>
+        <h1>Gần đây</h1>
         <button className='btn'>
           Chi tiết
-          <BsArrowRightShort className='icon'/>
+          <BsArrowRightShort className='icon' />
         </button>
       </div>
 
       <div className='secContainer grid'>
 
         <div className='singleCustomer flex'>
-          <img src={img} alt='Customer Image'/>
+          <img src={img} alt='Customer Image' />
           <div className='customerDetails'>
             <span className='name'>HieuChau</span>
             <small>Tích được 19 điểm</small>
@@ -30,7 +30,7 @@ const Activity = () => {
           </div>
         </div>
         <div className='singleCustomer flex'>
-          <img src={img} alt='Customer Image'/>
+          <img src={img} alt='Customer Image' />
           <div className='customerDetails'>
             <span className='name'>TuanPhan123</span>
             <small>Tích được 7 điểm</small>
@@ -40,7 +40,7 @@ const Activity = () => {
           </div>
         </div>
         <div className='singleCustomer flex'>
-          <img src={img} alt='Customer Image'/>
+          <img src={img} alt='Customer Image' />
           <div className='customerDetails'>
             <span className='name'>NhatTran2408</span>
             <small>Tích được 5 điểm</small>
@@ -50,7 +50,7 @@ const Activity = () => {
           </div>
         </div>
         <div className='singleCustomer flex'>
-          <img src={img} alt='Customer Image'/>
+          <img src={img} alt='Customer Image' />
           <div className='customerDetails'>
             <span className='name'>HieuAdam</span>
             <small>Tích được 11 điểm</small>
@@ -60,7 +60,7 @@ const Activity = () => {
           </div>
         </div>
         <div className='singleCustomer flex'>
-          <img src={img} alt='Customer Image'/>
+          <img src={img} alt='Customer Image' />
           <div className='customerDetails'>
             <span className='name'>TrinhTran</span>
             <small>Tích được 4 điểm</small>
@@ -70,7 +70,7 @@ const Activity = () => {
           </div>
         </div>
         <div className='singleCustomer flex'>
-          <img src={img} alt='Customer Image'/>
+          <img src={img} alt='Customer Image' />
           <div className='customerDetails'>
             <span className='name'>MaiAnh</span>
             <small>Tích được 7 điểm</small>
@@ -79,7 +79,7 @@ const Activity = () => {
             5 phút trước
           </div>
         </div>
-        
+
 
       </div>
     </div>

@@ -1,57 +1,106 @@
-.about{
-    margin: 100px auto;
+.about {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.about-left{
-    flex-basis: 40%;
+
+.about-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
-.about-right{
-    flex-basis: 56%;
-}
-.about-img{
-    width: 100%;
-    border-radius: 10px;
-}
-.play-icon{
-    width: 60px;
+
+.play-icon {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
 }
-.about h3{
-    font-weight: 600;
-    font-weight: 16px;
+
+.about-right {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.about-right h3 {
     color: #212EA0;
-}
-.about h2{
-    font-size: 35px;
-    color: #000F38;
-    margin: 10px 0;
-    max-width: 400px;
-}
-.about p{
-    color: #676767;
-    margin-bottom: 15px;
+    padding-bottom: 20px;
 }
 
-/* --------- media query --------- */
+.about-right h2 {
+    padding-bottom: 20px;
+}
 
-@media (max-width: 800px){
-    .about{
+.about-right p {
+    padding-bottom: 10px;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.play-icon {
+    cursor: pointer;
+    width: 50px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
+}
+
+@media (max-width: 800px) {
+    .about {
         flex-direction: column;
+        text-align: center;
     }
-    .about-left{
-        flex-basis: 100%;
-        margin: 20px;
+
+    .about-left,
+    .about-right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about-right {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .about {
+        padding: 10px;
+        /* Giảm padding để tiết kiệm không gian */
+    }
+
+    .about-left {
         order: 2;
     }
-    .about-right{
-        flex-basis: 100%;
+
+    .about-left,
+    .about-right {
+        width: 60%;
+        padding: 5px;
+        /* Giảm padding để tiết kiệm không gian */
+    }
+
+    .about-right p {
+        font-size: 14px;
+        /* Giảm kích thước font để vừa vặn hơn */
+        padding-bottom: 7px;
+    }
+
+    .play-icon {
+        width: 30px;
+        /* Giảm kích thước biểu tượng phát */
+        height: 30px;
+        /* Giảm kích thước biểu tượng phát */
     }
 }

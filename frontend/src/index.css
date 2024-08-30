@@ -8,6 +8,7 @@
 }
 body{
     background-color: #f5f5f5;
+    text-align: center;
 }
 a{
     text-decoration: none;
@@ -43,7 +44,7 @@ a{
 
 /* --------- media query --------- */
 
-@media (max-width: 1200px){
+/* @media (max-width: 1200px){
     .container{
         padding-left: 5%;
         padding-right: 5%;
@@ -51,4 +52,4 @@ a{
     .btn{
         padding: 14px 22px;
     }
-}
+} */

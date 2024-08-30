@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './Testimonials.css'
 import next_icon from '../../assets/next-icon.png'
 import back_icon from '../../assets/back-icon.png'
@@ -8,34 +8,32 @@ import user_3 from '../../assets/user-3.jpg'
 import user_4 from '../../assets/user-4.jpg'
 
 const Testimonials = () => {
+  const slider = useRef(null);
+  const [tx, setTx] = useState(0);
 
-  const slider = useRef()
-  let tx = 0
-  
   const slideForward = () => {
-    if(tx > -50){
-      tx -= 25
+    const maxTranslateX = -((slider.current.children.length - 1) * 100); // Maximum translation
+    if (tx > maxTranslateX) {
+      setTx(tx - (100 / slider.current.children.length)); // Move one step
     }
-    slider.current.style.transform = `translateX(${tx}%)`
-  }
+  };
 
   const slideBackward = () => {
-    if(tx < 0){
-      tx += 25
+    if (tx < 0) {
+      setTx(tx + (100 / slider.current.children.length)); // Move one step
     }
-    slider.current.style.transform = `translateX(${tx}%)`
-  }
+  };
 
   return (
     <div className='testimonials'>
-      <img src={next_icon} alt='' className='next-btn' onClick={slideForward}/>
-      <img src={back_icon} alt='' className='back-btn' onClick={slideBackward}/>
+      <img src={next_icon} alt='Next' className='next-btn' onClick={slideForward} />
+      <img src={back_icon} alt='Back' className='back-btn' onClick={slideBackward} />
       <div className='slider'>
-        <ul ref={slider}>
+        <ul ref={slider} style={{ transform: `translateX(${tx}%)`, transition: 'transform 0.5s ease' }}>
           <li>
             <div className='slide'>
               <div className='user-info'>
-                <img src={user_1} alt=''/>
+                <img src={user_1} alt='User 1' />
                 <div>
                   <h3>Nguyễn Văn Một</h3>
                   <span>Đà Nẵng</span>
@@ -44,10 +42,10 @@ const Testimonials = () => {
               <p>Thùng rác tôi thấy rất là thông minh, đặc biệt là tích điểm, tôi thích nó vcl, tôi đã vứt nhiều rác và đổi được rất nhiều phần thưởng</p>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div className='slide'>
               <div className='user-info'>
-                <img src={user_2} alt=''/>
+                <img src={user_2} alt='User 2' />
                 <div>
                   <h3>Nguyễn Văn Hai</h3>
                   <span>Quảng Nam</span>
@@ -59,7 +57,7 @@ const Testimonials = () => {
           <li>
             <div className='slide'>
               <div className='user-info'>
-                <img src={user_3} alt=''/>
+                <img src={user_3} alt='User 3' />
                 <div>
                   <h3>Trần Thị Ba</h3>
                   <span>Huế</span>
@@ -71,19 +69,19 @@ const Testimonials = () => {
           <li>
             <div className='slide'>
               <div className='user-info'>
-                <img src={user_4} alt=''/>
+                <img src={user_4} alt='User 4' />
                 <div>
                   <h3>Mông Thị Bốn</h3>
                   <span>Quảng Trị</span>
                 </div>
               </div>
-              <p>Với giá thành cao nhưng thứ tôi nhận lại là một thùng rác tuyệt vời, tôi thích nó và nhân viên của tôi cũng thích nó, tôi kết hợp điểm từ thùng rác ttrong việc bầu chọn nhân viên xuất sắc nhất tháng</p>
+              <p>Với giá thành cao nhưng thứ tôi nhận lại là một thùng rác tuyệt vời, tôi thích nó và nhân viên của tôi cũng thích nó, tôi kết hợp điểm từ thùng rác trong việc bầu chọn nhân viên xuất sắc nhất tháng</p>
             </div>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;

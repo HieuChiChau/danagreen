@@ -107,6 +107,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  pointer-events: none;
 }
 .topSection .cardSection .rightCard h1, .topSection .cardSection .rightCard p, .topSection .cardSection .rightCard .btn {
   z-index: 100;

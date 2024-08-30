@@ -1,27 +1,42 @@
-.product{
-    margin: 80px auto;
+.product {
+    margin: 40px auto;
     width: 90%;
     text-align: center;
 }
-.bin{
+
+.bin {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-.bin img{
+
+.bin img {
     width: 23%;
     border-radius: 10px;
+    transition: width 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
-/* --------- media query --------- */
+/* --------- Media Queries --------- */
 
-@media (max-width: 800px){
-    .bin{
+@media (max-width: 800px) {
+    .bin {
         flex-wrap: wrap;
+        justify-content: center; /* Căn giữa các ảnh khi wrap */
     }
-    .bin img{
-        width: 48%;
+    .bin img {
+        width: 35%; /* Giảm kích thước ảnh xuống khi màn hình nhỏ hơn 800px */
         margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .bin img {
+        width: 65%; /* Giảm kích thước ảnh xuống khi màn hình nhỏ hơn 450px */
+        margin-bottom: 20px;
+    }
+    .product button{
+        font-size: 13px;
+        padding: 14px;
     }
 }

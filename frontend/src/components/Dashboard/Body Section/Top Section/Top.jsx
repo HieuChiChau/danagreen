@@ -27,15 +27,15 @@ const Top = () => {
         </div>
 
         <div className='searchbar flex'>
-          <input type='text' placeholder='Tìm kiếm ...'/>
-          <BiSearchAlt className='icon'/>
+          <input type='text' placeholder='Tìm kiếm ...' />
+          <BiSearchAlt className='icon' />
         </div>
 
         <div className='adminDiv flex'>
-          <TbMessageCircle className='icon'/>
-          <IoNotificationsOutline className='icon'/>
+          <TbMessageCircle className='icon' />
+          <IoNotificationsOutline className='icon' />
           <div className='adminImage'>
-            <img src={img} alt='' onClick={handleImageClick}/>
+            <img src={img} alt='' onClick={handleImageClick} />
           </div>
         </div>
       </div>
@@ -63,24 +63,24 @@ const Top = () => {
 
               <div className='flex'>
                 <span>
-                  Hôm nay <br/> <small>2 sự kiện</small>
+                  Hôm nay <br /> <small>2 sự kiện</small>
                 </span>
                 <span>
-                  Tháng này <br/> <small>20 sự kiện</small>
+                  Tháng này <br /> <small>20 sự kiện</small>
                 </span>
               </div>
               <span className='flex link'>
-                Xem tất cả <BsArrowRightShort className='icon'/>
+                Xem tất cả <BsArrowRightShort className='icon' />
               </span>
 
             </div>
 
             <div className='imgDiv'>
-              <img src={img_trs} alt='Image Name'/>
+              <img src={img_trs} alt='Image Name' />
             </div>
 
             <div className='sideBarCard'>
-              <BsQuestionCircle className='icon'/>
+              <BsQuestionCircle className='icon' />
               <div className='cardContent'>
                 <div className='circle1'></div>
                 <div className='circle2'></div>
@@ -92,7 +92,7 @@ const Top = () => {
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   )

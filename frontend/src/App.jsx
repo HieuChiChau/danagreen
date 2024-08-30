@@ -35,10 +35,11 @@ const App = () => {
             <div className='container'>
               <Title subTitle='Đại diện thương hiệu của chúng tôi' title='Các influencer' />
               <Programs />
+              <Title subTitle='Về sản phẩm của chúng tôi' title='Nâng cao ý thức vứt rác' />
               <About setPlayState={setPlayState} />
               <Title subTitle='Thùng rác thông minh DANAGreen' title='Hình ảnh sản phẩm' />
               <Product />
-              <Title subTitle='Trải nghiệm' title='Người dùng nói gì về DANAGreen?' />
+              <Title subTitle='Trải nghiệm' title='Nhận xét về DANAGreen?' />
               <Testimonials />
               <Title subTitle='Đăng nhập/ Đăng ký' title='Tham gia cùng chúng tôi' />
               <LoginSignup />

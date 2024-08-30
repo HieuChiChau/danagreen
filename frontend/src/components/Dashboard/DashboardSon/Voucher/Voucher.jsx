@@ -146,7 +146,7 @@ const Voucher = () => {
                         <div className="voucher-info">
                             <h3 className="voucher-title">{voucher.title}</h3>
                             <p className="voucher-description">{voucher.description}</p>
-                            <p className="voucher-expiry-date">Hạn sử dụng: {voucher.expiryDate}</p>
+                            <p className="voucher-expiry-date">HSD: {voucher.expiryDate}</p>
                             <div className="voucher-actions">
                                 <button className="use-voucher-button">Đổi</button>
                                 {/* <button className="copy-code-button"> Sao chép mã</button> */}

@@ -20,14 +20,19 @@
 }
 .hero{
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(rgba(2, 84, 95, 0.474), rgba(11, 142, 109, 0.419)), url('../../assets/hero.png');
+    min-width: 100vh;
+    min-height: 150vh;
+    background: linear-gradient(rgba(2, 84, 95, 0.474), rgba(11, 142, 109, 0.419)), url('../../assets/about.png');
     background-size: cover;
     background-position: center;
     color: var(--whiteColor);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .hero-text{
     text-align: center;
@@ -60,4 +65,21 @@
         font-size: 14px;
         margin: 15px auto 30px;
     }
+}
+@media (max-width: 450px){
+    .hero {
+        background-size: 100% auto; /* Giữ nền trong bề ngang của màn hình */
+        background-position: center; /* Căn giữa hình nền */
+        min-height: 70vh;
+    }
+    .hero-text h1{
+        font-size: 23px;
+        max-width: 270px;
+        margin: auto;
+    }
+    .hero-text p{
+        font-size: 10px;
+        margin: 13px auto 27px;
+    }
+    
 }

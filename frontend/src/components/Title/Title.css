@@ -25,10 +25,25 @@
     font-weight: 600;
     text-transform: uppercase;
     margin: 70px 0 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .title h2{
     font-size: 32px;
     color: #000F38;
     margin-top: 5px;
     text-transform: none;
+    max-width: 100%; /* Giới hạn kích thước */
+}
+
+@media (max-width: 450px){
+    .title{
+        font-size: 10px; /* Giảm nhẹ kích thước */
+        margin: 100px 0 20px; /* Điều chỉnh margin */
+    }
+    .title h2{
+        font-size: 17px; /* Giảm nhẹ kích thước */
+        max-width: 100%; /* Đảm bảo không bị tràn */
+    }
 }

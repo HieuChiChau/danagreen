@@ -26,3 +26,15 @@
         margin-top: 10px;
     }
 }
+@media (max-width: 450px){
+    .footer{
+        display: block;
+        text-align: center;
+    }
+    .footer ul li{
+        margin: 7px;
+    }
+    .footer ul{
+        margin-top: 7px;
+    }
+}

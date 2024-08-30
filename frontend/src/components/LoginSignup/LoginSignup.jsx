@@ -46,27 +46,27 @@ const LoginSignup = () => {
                 </div>
                 <div className='underline'></div>
             </div>
-            
+
             <div className='inputs'>
                 {action === 'Login' ? <div className='option-login'>
                     <button className='login-button'>
-                    <img src={gg} alt='Google' className='login-icon'/>
+                        <img src={gg} alt='Google' className='login-icon' />
                     </button>
                     <button className='login-button'>
-                    <img src={fb} alt='Facebook' className='login-icon'/>
+                        <img src={fb} alt='Facebook' className='login-icon' />
                     </button>
-                </div> 
-                : <div className='input'>
-                    <img src={user_icon} alt='' className='login-icon'/>
-                    <input 
-                        type='text' 
-                        placeholder='Tên người dùng' 
-                        value={username} 
-                        onChange={(e) => setUsername(e.target.value)} 
-                        required />
-                </div>}
+                </div>
+                    : <div className='input'>
+                        <img src={user_icon} alt='' className='login-icon' />
+                        <input
+                            type='text'
+                            placeholder='Tên người dùng'
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required />
+                    </div>}
                 <div className='input'>
-                    <img src={email_icon} alt='' className='siuuuu'/>
+                    <img src={email_icon} alt='' className='siuuuu' />
                     <input
                         type='email'
                         placeholder='Email'
@@ -76,7 +76,7 @@ const LoginSignup = () => {
                     />
                 </div>
                 <div className='input'>
-                    <img src={password_icon} alt='' className='siuuuu'/>
+                    <img src={password_icon} alt='' className='siuuuu' />
                     <input
                         type='password'
                         placeholder='Password'
@@ -89,15 +89,15 @@ const LoginSignup = () => {
             {action === 'Sign up' ? <div></div> : <div className='forgot-password'>Quên mật khẩu? <span>Nhấn tại đây!</span></div>}
 
             <div className='submit-container'>
-                <div 
+                <div
                     className={action === 'Login' ? 'submit gray' : 'submit'}
-                    onClick= {action === 'Sign up' ? handleRegister : () => { setAction('Sign up') }}
+                    onClick={action === 'Sign up' ? handleRegister : () => { setAction('Sign up') }}
                 >
                     Đăng ký
                 </div>
-                <div 
+                <div
                     className={action === 'Sign up' ? 'submit gray' : 'submit'}
-                    onClick= {action === 'Login' ? handleLogin : () => { setAction('Login') }}
+                    onClick={action === 'Login' ? handleLogin : () => { setAction('Login') }}
                 >
                     Đăng nhập
                 </div>

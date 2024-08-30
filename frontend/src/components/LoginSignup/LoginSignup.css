@@ -141,6 +141,73 @@
 }
 
 
+@media (max-width: 450px) {
+    .loginsignup {
+        width: 60%;
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .header .text {
+        font-size: 30px;
+    }
+
+    .inputs {
+        margin-top: 30px;
+    }
+
+    .input {
+        width: 300px;
+        background-color: #EAEAEA;
+        height: 45px;
+    }
+
+    .input input {
+        font-size: 14px;
+        height: 50px;
+        color: #797979;
+    }
+
+    .forgot-password {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    .submit-container {
+        margin: 40px auto;
+    }
+
+    .submit {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .login-button {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .login-button img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .siuuuu {
+        width: 1.5rem;
+        height: 1rem;
+    }
+
+    .submit-container{
+        gap: 10px;
+        margin: 30px auto;
+    }
+    .submit-container div{
+        font-size: 14px;
+        width: 120px;
+        border-radius: 40px;
+    }
+}
+
 
 
 
