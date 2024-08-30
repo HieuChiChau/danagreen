@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const app = express()
 const port = process.env.PORT || 3000
-const host = proces.env.IP
+const host = process.env.IP
 
 const authRoutes = require('./routes/authRoutes')
 const connectDB = require('./config/db')
