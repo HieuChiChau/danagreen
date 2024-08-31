@@ -10,7 +10,7 @@ import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
 
 //Import Images=====>
 import img from '../../../../assets/user.jpg'
-import video from '../../../../assets/video1.mp4'
+import imggif from '../../../../assets/main_db.webp'
 import img_trs from '../../../../assets/bin-transparent.png'
 
 const Top = () => {
@@ -52,7 +52,7 @@ const Top = () => {
           </div>
 
           <div className='videoDiv'>
-            <video src={video} autoPlay loop muted></video>
+            <img src={imggif} alt='' />
           </div>
         </div>
 

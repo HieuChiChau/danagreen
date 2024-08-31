@@ -116,7 +116,7 @@
                 bottom: 0;
                 left: 0;
 
-                video{
+                img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -133,12 +133,14 @@
                 font-size: var(--h1FontSize);
                 color: var(--whiteForTextRC);
                 font-weight: 800;
+                color: white;
             }
 
             p{
                 padding: 1rem;
                 color: var(--GreenForTextRC);
                 font-weight: 500;
+                color: white;
             }
 
             .buttons{
@@ -358,6 +360,7 @@
         }
 
         .title{
+            padding-top: 50px;
             text-align: center;
             margin: auto;
         }

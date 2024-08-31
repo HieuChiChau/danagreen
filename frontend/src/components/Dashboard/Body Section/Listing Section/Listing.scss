@@ -61,6 +61,7 @@
             padding: 1rem;
             border-radius: 10px;
             background: var(--itemCardColor);
+            border: 1px solid var(--PrimaryColor);
         
             &:hover{
                 background: var(--itemCardHover);
@@ -173,6 +174,28 @@
         }
         .singleItem{
             width: 250px !important;
+        }
+
+        .heading{
+            .btn{
+                font-weight: 500;
+                height: 40px;
+                width: 110px;
+            }
+        }
+    }
+    .sellers{
+        .topSellers{
+            .btn{
+                width: 120px;
+            }
+        }
+    }
+    .featuredSellers{
+        .heading{
+            .btn{
+                width: 120px;
+            }
         }
     }
 }

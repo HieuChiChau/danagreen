@@ -95,3 +95,13 @@
         width: 100%;
     }
 }
+@media screen and (max-width: 490px) {
+    .activitySection{
+        .heading{
+            .btn{
+                height: 40px;
+                font-weight: 500;
+            }
+        }
+    }
+}

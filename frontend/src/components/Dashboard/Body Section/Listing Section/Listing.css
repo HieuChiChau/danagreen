@@ -57,6 +57,7 @@
   padding: 1rem;
   border-radius: 10px;
   background: var(--itemCardColor);
+  border: 1px solid var(--PrimaryColor);
 }
 .listingSection .secContainer .singleItem:hover {
   background: var(--itemCardHover);
@@ -141,5 +142,16 @@
   }
   .listingSection .singleItem {
     width: 250px !important;
+  }
+  .listingSection .heading .btn {
+    font-weight: 500;
+    height: 40px;
+    width: 110px;
+  }
+  .sellers .topSellers .btn {
+    width: 120px;
+  }
+  .featuredSellers .heading .btn {
+    width: 120px;
   }
 }/*# sourceMappingURL=Listing.css.map */
