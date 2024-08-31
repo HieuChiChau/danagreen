@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Helper.css'
 import { useNavigate } from 'react-router-dom';
+import SupportAPI from '../../../../api/support';
 
 const Helper = () => {
   const [selectedIssue, setSelectedIssue] = useState('');
   const [details, setDetails] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate()
 
   const issues = [
     'Lỗi hiển thị trên trang',
@@ -19,19 +22,24 @@ const Helper = () => {
     'Khác'
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!selectedIssue) {
       alert('Vui lòng chọn một lỗi.');
       return;
     }
-    console.log('Lỗi đã chọn:', selectedIssue);
-    console.log('Chi tiết lỗi:', details);
-  };
-  const navigate = useNavigate()
-    const handleBackClick = () => {
+
+    setIsSubmitting(true);
+
+    try {
+      const token = localStorage.getItem('authToken');
+      await SupportAPI.reportIssue(token, selectedIssue, details);
+      alert('Báo cáo lỗi đã được gửi thành công!');
       navigate('/dashboard');
+    } catch (error) {
+      alert('Có lỗi xảy ra khi gửi báo cáo.');
     }
+  };
 
   return (
     <div className="report-issue-containe">
@@ -54,17 +62,20 @@ const Helper = () => {
 
         <div className="details-wrapper">
           <label htmlFor="details">Chi tiết lỗi:</label>
-          <textarea 
-            id="details" 
-            value={details} 
-            onChange={(e) => setDetails(e.target.value)} 
-            rows="4" 
+          <textarea
+            id="details"
+            value={details}
+            onChange={(e) => setDetails(e.target.value)}
+            rows="4"
             placeholder="Mô tả chi tiết về lỗi bạn gặp phải."
           />
         </div>
 
-        <button type="submit" className="submit-button">Gửi báo cáo</button>
-        <button onClick={handleBackClick} className="button-backkkk">Trở lại</button>
+        <button type="submit" className="submit-button" disabled={isSubmitting}>
+          {isSubmitting ? 'Đang gửi...' : 'Gửi báo cáo'}
+        </button>
+
+        <button onClick={() => navigate('/dashboard')} className="button-backkkk">Trở lại</button>
       </form>
     </div>
   );

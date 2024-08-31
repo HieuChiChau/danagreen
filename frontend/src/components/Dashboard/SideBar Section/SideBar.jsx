@@ -32,7 +32,7 @@ const SideBar = () => {
         <ul className='menuLists grid'>
 
           <li className='listItem'>
-            <a href='#' className='menuLink flex'>
+            <a className='menuLink flex'>
               <IoMdSpeedometer className='icon' />
               <span className='smallText'>
                 Trang Chủ
@@ -41,7 +41,7 @@ const SideBar = () => {
           </li>
 
           <li className='listItem' onClick={() => navigate('/qrcode')}>
-            <a href='#' className='menuLink flex'>
+            <a className='menuLink flex'>
               <IoIosQrScanner className='icon' />
               <span className='smallText'>
                 Quét QR
@@ -50,7 +50,7 @@ const SideBar = () => {
           </li>
 
           <li className='listItem' onClick={() => navigate('/events')}>
-            <a href='#' className='menuLink flex'>
+            <a className='menuLink flex'>
               <MdEventAvailable className='icon' />
               <span className='smallText'>
                 Sự Kiện
@@ -59,7 +59,7 @@ const SideBar = () => {
           </li>
 
           <li className='listItem' onClick={() => navigate('/ranking')}>
-            <a href='#' className='menuLink flex'>
+            <a className='menuLink flex'>
               <BsTrophy className='icon' />
               <span className='smallText'>
                 Xếp Hạng
@@ -67,7 +67,7 @@ const SideBar = () => {
             </a>
           </li>
           <li className='listItem' onClick={() => navigate('/voucher')}>
-            <a href='#' className='menuLink flex'>
+            <a className='menuLink flex'>
               <GoGift className='icon' />
               <span className='smallText'>
                 Voucher

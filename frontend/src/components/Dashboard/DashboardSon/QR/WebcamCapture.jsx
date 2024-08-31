@@ -23,7 +23,7 @@ const WebcamCapture = ({ onCapture }) => {
   const capture = () => {
     if (webcamRef.current) {
       const imageSrc = webcamRef.current.getScreenshot();
-      onCapture(imageSrc); // Gọi hàm onCapture với ảnh chụp từ camera
+      onCapture(imageSrc);
     }
   };
 

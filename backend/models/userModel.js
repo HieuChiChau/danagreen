@@ -19,10 +19,11 @@ const UserSchema = new Schema({
         required: true,
     },
     profile: {
-        phone: { type: String, default: null },
+        phone: { type: String, default: '7 cỏ' },
         birthDate: { type: Date, default: null },
-        hobby: { type: String, default: null },
-        address: { type: String, default: null }
+        hobby: { type: String, default: '7 cỏ' },
+        address: { type: String, default: '7 cỏ' },
+        image: { type: String, default: '' }
     },
     score: {
         type: Number,
@@ -33,19 +34,24 @@ const UserSchema = new Schema({
 //Mã hoá
 UserSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
-        return next()
+        return next();
     }
     try {
-        const salt = await bcrypt.genSalt(10)
-        this.password = await bcrypt.hash(this.password, salt)
-        next()
+        const salt = await bcrypt.genSalt(10);
+        this.password = await bcrypt.hash(this.password, salt);
+        next();
     } catch (error) {
-        next(error)
+        next(error);
     }
-})
+});
+
 
 UserSchema.methods.matchPassword = async function (password) {
-    return await bcrypt.compare(password, this.password)
+    // return await bcrypt.compare(password, this.password)
+
+    const isMatch = await bcrypt.compare(password, this.password);
+    console.log('Mật khẩu so sánh:', isMatch);
+    return isMatch;
 }
 
 module.exports = mongoose.model('User', UserSchema)

@@ -5,8 +5,11 @@ class AuthAPI {
         try {
             const response = await axios.post('https://192.168.5.3:3000/api/auth/login', {
                 email,
-                password,
+                password
             });
+
+            const { token } = response.data;
+            localStorage.setItem('authToken', token);
 
             return response.data;
         } catch (error) {

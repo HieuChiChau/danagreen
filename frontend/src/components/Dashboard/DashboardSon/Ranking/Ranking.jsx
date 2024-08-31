@@ -1,55 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Ranking.css';
 import { useNavigate } from 'react-router-dom';
+import RankingAPI from '../../../../api/ranking';
+import UserAPI from '../../../../api/user';
 
 const Ranking = () => {
-  const users = [
-    { rank: 1, name: 'User 1', score: 1000 },
-    { rank: 2, name: 'User 2', score: 1000 },
-    { rank: 3, name: 'User 3', score: 800 },
-    { rank: 4, name: 'User 4', score: 700 },
-    { rank: 5, name: 'User 5', score: 600 },
-    { rank: 6, name: 'User 6', score: 500 },
-    { rank: 7, name: 'User 7', score: 400 },
-    { rank: 8, name: 'User 2', score: 900 },
-    { rank: 9, name: 'User 3', score: 800 },
-    { rank: 10, name: 'User 4', score: 700 },
-    { rank: 11, name: 'User 5', score: 600 },
-    { rank: 12, name: 'User 3', score: 800 },
-    { rank: 13, name: 'User 4', score: 700 },
-    { rank: 14, name: 'User 5', score: 600 },
-    { rank: 15, name: 'User 6', score: 500 },
-    { rank: 16, name: 'User 7', score: 400 },
-    { rank: 17, name: 'User 8', score: 300 },
-    { rank: 18, name: 'User 9', score: 200 },
-    { rank: 19, name: 'User 10', score: 100 },
-    { rank: 20, name: 'User 1', score: 1000 },
-    { rank: 21, name: 'User 2', score: 900 },
-    { rank: 22, name: 'User 8', score: 300 },
-    { rank: 23, name: 'User 9', score: 200 },
-    { rank: 24, name: 'User 10', score: 100 },
-    { rank: 25, name: 'User 1', score: 1000 },
-    { rank: 26, name: 'User 2', score: 900 },
-    { rank: 27, name: 'User 3', score: 800 },
-    { rank: 28, name: 'User 4', score: 700 },
-    { rank: 29, name: 'User 5', score: 600 },
-    { rank: 30, name: 'User 6', score: 500 },
-    { rank: 31, name: 'User 7', score: 400 },
-    { rank: 32, name: 'User 6', score: 500 },
-    { rank: 33, name: 'User 7', score: 400 },
-    { rank: 34, name: 'User 8', score: 300 },
-    { rank: 35, name: 'User 9', score: 200 },
-    { rank: 36, name: 'User 10', score: 100 },
-    { rank: 37, name: 'User 1', score: 1000 },
-    { rank: 38, name: 'User 2', score: 900 },
-    { rank: 39, name: 'User 8', score: 300 },
-    { rank: 40, name: 'User 9', score: 200 },
-    { rank: 41, name: 'User 10', score: 100 },
-  ];
-
-  const navigate = useNavigate();
+  const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUserRank, setCurrentUserRank] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const recordsPerPage = 10;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchRanking = async () => {
+      try {
+        const data = await RankingAPI.getRanking();
+        setUsers(data);
+      } catch (error) {
+        setError('Error fetching ranking data');
+      }
+    };
+
+    const fetchUserProfile = async () => {
+      try {
+        const token = localStorage.getItem('authToken');
+        const data = await UserAPI.getProfile(token);
+        setCurrentUser(data);
+      } catch (error) {
+        setError('Error fetching user profile');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRanking();
+    fetchUserProfile();
+  }, []);
+
+  useEffect(() => {
+    if (currentUser && users.length) {
+      // Sắp xếp người dùng theo điểm số giảm dần
+      const sortedUsers = [...users].sort((a, b) => b.score - a.score);
+      // Tính toán vị trí của người dùng hiện tại trong danh sách đã sắp xếp
+      const rank = sortedUsers.findIndex(user => user.username === currentUser.username);
+      setCurrentUserRank(rank !== -1 ? rank + 1 : 'Not ranked'); // Cộng 1 để làm cho thứ hạng bắt đầu từ 1
+    }
+  }, [currentUser, users]);
 
   const totalPages = Math.ceil(users.length / recordsPerPage);
 
@@ -62,7 +61,13 @@ const Ranking = () => {
     setCurrentPage(pageNumber);
   };
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <div className="leaderboard">
@@ -72,19 +77,36 @@ const Ranking = () => {
           <tr>
             <th>Hạng</th>
             <th>Tên</th>
+            <th>Khu vực</th>
             <th>Điểm</th>
           </tr>
         </thead>
         <tbody>
-          {currentRecords.map(user => (
-            <tr key={user.rank}>
-              <td>{user.rank}</td>
-              <td>{user.name}</td>
+          {currentRecords.map((user, index) => (
+            <tr key={user._id}>
+              <td>{(currentPage - 1) * recordsPerPage + index + 1}</td>
+              <td>{user.username}</td>
+              <td>{user.profile.address}</td>
               <td>{user.score}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      {currentUser && (
+        <div className="user-ranking">
+          <h3>Thứ Hạng Của Bạn</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td>{currentUserRank}</td>
+                <td>{currentUser.username}</td>
+                <td>{currentUser.profile.address}</td>
+                <td>{currentUser.score}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
       <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
           <button

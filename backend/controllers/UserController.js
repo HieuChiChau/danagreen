@@ -1,8 +1,28 @@
 const User = require('../models/userModel');
 const History = require('../models/historyModel')
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs')
 
 class UserController {
+
+    async getProfile(req, res) {
+        if (!req.user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        try {
+            const user = req.user
+
+            res.json({
+                username: user.username,
+                email: user.email,
+                profile: user.profile,
+                score: user.score,
+            })
+        } catch (error) {
+            console.error('Get profile error: ', error);
+            res.status(500).json({ message: 'Lỗi máy chủ' });
+        }
+    }
+
     async update(req, res) {
         const { phone, birthDate, hobby, address } = req.body;
 
@@ -29,7 +49,7 @@ class UserController {
         }
     }
 
-    async changePassword(req, res) {
+    async updatePassword(req, res) {
         const { oldPassword, newPassword } = req.body;
 
         try {
@@ -38,19 +58,34 @@ class UserController {
                 return res.status(404).json({ message: 'Không tìm thấy người dùng!' });
             }
 
+            // Kiểm tra mật khẩu cũ
             const isMatch = await user.matchPassword(oldPassword);
             if (!isMatch) {
                 return res.status(400).json({ message: 'Sai mật khẩu cũ!' });
             }
 
-            // Mã hoá
-            const salt = await bcrypt.genSalt(10);
-            user.password = await bcrypt.hash(newPassword, salt);
+            // Kiểm tra mật khẩu mới có khác mật khẩu cũ không
+            if (await user.matchPassword(newPassword)) {
+                return res.status(400).json({ message: 'Mật khẩu mới không được giống mật khẩu cũ!' });
+            }
 
+            console.log('Mật khẩu cũ (trước khi mã hóa):', oldPassword);
+            console.log('Mật khẩu mới (trước khi mã hóa):', newPassword);
+
+            user.password = newPassword;
             await user.save();
+
+            // Xác minh mật khẩu mới có được lưu đúng cách không
+            const updatedUser = await User.findById(req.user._id);
+            const isPasswordUpdated = await updatedUser.matchPassword(newPassword);
+
+            if (!isPasswordUpdated) {
+                return res.status(500).json({ message: 'Lỗi khi lưu mật khẩu mới!' });
+            }
 
             res.status(200).json({ message: 'Đổi mật khẩu thành công' });
         } catch (error) {
+            console.error('Error updating password:', error);
             res.status(500).json({ message: 'Đổi mật khẩu thất bại!', error: error.message });
         }
     }
@@ -90,6 +125,7 @@ class UserController {
             res.status(500).json({ message: 'Lấy bảng xếp hạng thất bại', error: error.message });
         }
     }
+
 }
 
 module.exports = new UserController();

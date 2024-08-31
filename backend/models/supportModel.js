@@ -8,13 +8,13 @@ const SupportRequestSchema = new Schema({
         ref: 'User',
         required: true,
     },
-    subject: {
+    issue: {
         type: String,
-        required: true,
+        required: true
     },
-    message: {
+    details: {
         type: String,
-        required: true,
+        required: true
     },
     createdAt: {
         type: Date,

@@ -2,7 +2,7 @@ import React from 'react'
 import './Listing.css'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
-
+import { useNavigate } from 'react-router-dom';
 //Import Images=====>
 import img1 from '../../../../assets/beer.png'
 import img3 from '../../../../assets/paper.png'
@@ -10,12 +10,14 @@ import img4 from '../../../../assets/recycle.png'
 import user from '../../../../assets/user.jpg'
 const Listing = () => {
 
+  const navigate = useNavigate()
+
   return (
 
     <div className='listingSection'>
       <div className='heading flex'>
         <h1>Lịch sử của tôi</h1>
-        <button className='btn flex'>
+        <button className='btn flex' onClick={() => navigate('/history')}>
           Xem <BsArrowRightShort className='icon' />
         </button>
       </div>

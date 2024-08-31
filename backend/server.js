@@ -13,6 +13,9 @@ const host = process.env.IP
 
 const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
+const supportRoutes = require('./routes/supportRoutes')
+const historyRoutes = require('./routes/historyRoutes')
+
 const connectDB = require('./config/db')
 
 connectDB.connect()
@@ -28,6 +31,8 @@ app.use(morgan('dev'))
 
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
+app.use('/api', supportRoutes)
+app.use('api/history', historyRoutes)
 
 // app.listen(port, host, () => {
 //     console.log(`App listening at http://${host}:${port}`);

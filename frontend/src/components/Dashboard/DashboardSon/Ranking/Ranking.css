@@ -28,6 +28,7 @@
   padding-left: 200px;
   padding-right: 200px;
   border: 1px solid black;
+  background-image: url('../../../../assets/background.jpg');
   
 }
 
@@ -128,6 +129,28 @@
   justify-content: center;
   margin-top: 2rem;
 }
+.user-ranking {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.user-ranking h3{
+  margin-bottom: 10px;
+}
+.user-ranking table {
+  padding-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-ranking th, .user-ranking td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
 
 /* Media Queries cho thiết bị di động */
 @media (max-width: 600px) {

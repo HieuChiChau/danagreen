@@ -1,26 +1,27 @@
-import SupportRequest from "../models/supportModel"
+const Support = require('../models/supportModel')
 
 class SupportController {
-    async createSupportRequest(req, res) {
+    async reportIssue(req, res) {
+        const { issue, details } = req.body;
 
-        const { subject, message } = req.body
-
-        if (!subject || !message) {
-            return res.status(400).json({ message: 'Lỗi trống!' });
+        if (!issue || !details) {
+            return res.status(400).json({ message: 'Vui lòng cung cấp đầy đủ thông tin.' });
         }
 
         try {
-            const newRequest = new SupportRequest({
-                userId: req.user._id,
-                subject,
-                message,
+            const newSupport = new Support({
+                issue,
+                details,
+                userId: req.user._id
             });
-            await newRequest.save();
-            res.status(201).json({ message: 'Gửi báo cáo thành công!', supportRequest });
+
+            await newSupport.save();
+            res.status(201).json({ message: 'Báo cáo lỗi đã được gửi!' });
         } catch (error) {
-            res.status(500).json({ message: 'Tạo yêu cầu hỗ trợ thất bại', error: error.message })
+            console.error('Error reporting issue:', error);
+            res.status(500).json({ message: 'Có lỗi xảy ra khi gửi báo cáo.' });
         }
     }
 }
 
-module.exports = new SupportController()
+module.exports = new SupportController();

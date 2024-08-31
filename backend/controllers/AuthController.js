@@ -1,16 +1,16 @@
 const User = require('../models/userModel')
 const jwt = require('jsonwebtoken')
 
-class AuthController{
+class AuthController {
 
-    async registerUser(req, res){
-        const{username, email, password} = req.body
+    async registerUser(req, res) {
+        const { username, email, password } = req.body
 
-        try{
-            let user= await User.findOne({email})
+        try {
+            let user = await User.findOne({ email })
 
-            if(user){
-                return res.status(400).json({message: 'Email Đã Được Sử Dụng'})
+            if (user) {
+                return res.status(400).json({ message: 'Email Đã Được Sử Dụng' })
             }
 
             user = new User({
@@ -20,26 +20,26 @@ class AuthController{
             })
             await user.save()
 
-            const payload={
-                user:{
-                    is: user.id,
+            const payload = {
+                user: {
+                    id: user._id,
                 },
             }
-            jwt.sign(payload, process.env.JWT_SECRET, {expiresIn: '1h'}, (error, token)=>{
+            jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' }, (error, token) => {
                 if (error) throw error
-                res.json({token})
+                res.json({ token })
             })
-        }catch(error){
-            res.status(500).json({message: 'Lỗi Máy Chủ'})
+        } catch (error) {
+            res.status(500).json({ message: 'Lỗi Máy Chủ' })
         }
     }
 
-    async loginUser(req, res){
-        const {email, password} = req.body
+    async loginUser(req, res) {
+        const { email, password } = req.body
 
         try {
-            const user = await User.findOne({email})
-            if(!user){
+            const user = await User.findOne({ email })
+            if (!user) {
                 return res.status(400).json({ msg: 'Sai Email! Người Dùng Không Tồn Tại' });
             }
 
@@ -48,14 +48,14 @@ class AuthController{
                 return res.status(400).json({ msg: 'Sai Mật Khẩu' });
             }
 
-            const payload={
-                user:{
-                    is: user.id,
+            const payload = {
+                user: {
+                    id: user._id,
                 },
             }
-            jwt.sign(payload, process.env.JWT_SECRET, {expiresIn: '1h'}, (error, token)=>{
+            jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' }, (error, token) => {
                 if (error) throw error
-                res.json({token})
+                res.json({ token })
             })
         } catch (error) {
             console.error("Server error:", error);

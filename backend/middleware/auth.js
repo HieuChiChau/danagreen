@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
+require('dotenv').config();
 
 const auth = async (req, res, next) => {
     const token = req.headers['authorization'] && req.headers['authorization'].split(' ')[1];
@@ -8,12 +9,12 @@ const auth = async (req, res, next) => {
     }
 
     try {
-        // Xác thực token
-        const decoded = jwt.verify(token, process.env.JWT_SECRET); // Sử dụng biến môi trường cho secret
-        req.user = await User.findById(decoded.id);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        console.log('>>>check decode: ', decoded)
+        req.user = await User.findById(decoded.user.id);
 
         if (!req.user) {
-            return res.status(404).json({ message: 'User not found' });
+            return res.status(404).json({ message: 'Sai token hoặc không tim thấy người dùng' });
         }
 
         next();

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Body.css'
-import video from '../../../../../assets/eventvid.mp4'
+import imggif from '../../../../../assets/event.webp'
 import img1 from '../../../../../assets/event1.jpg'
 import img2 from '../../../../../assets/event2.jpg'
 import img3 from '../../../../../assets/event3.jpg'
@@ -145,7 +145,7 @@ const Body = () => {
         <>
             <section className='home'>
                 <div className='overlay'></div>
-                <video src={video} muted autoPlay loop type='video/mp4'></video>
+                <img src={imggif} alt=''></img>
 
                 <div className='homeContent Containerr'>
                     <div className='textDiv'>
@@ -153,7 +153,7 @@ const Body = () => {
                             DANAGreen
                         </span>
                         <h1 className='homeTitle'>
-                            DANH SÁCH SỰ KIỆN
+                            SỰ KIỆN
                         </h1>
                     </div>
 

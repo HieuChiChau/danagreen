@@ -14,10 +14,9 @@ import imggif from '../../../../assets/main_db.webp'
 import img_trs from '../../../../assets/bin-transparent.png'
 
 const Top = () => {
+
   const navigate = useNavigate()
-  const handleImageClick = () => {
-    navigate('/profile'); // Chuyển hướng đến /dashboard/profile
-  };
+
   return (
     <div className='topSection'>
       <div className='headerSection flex'>
@@ -35,7 +34,7 @@ const Top = () => {
           <TbMessageCircle className='icon' />
           <IoNotificationsOutline className='icon' />
           <div className='adminImage'>
-            <img src={img} alt='' onClick={handleImageClick} />
+            <img src={img} alt='' onClick={() => navigate('/profile')} />
           </div>
         </div>
       </div>
@@ -47,8 +46,8 @@ const Top = () => {
           <p>DANaGreen sẽ thay đổi cách quản lý rác thải thông qua công nghệ!</p>
 
           <div className='buttons flex'>
-            <button className='btn'>Quét Mã</button>
-            <button className='btn transparent'>Xếp Hạng</button>
+            <button className='btn' onClick={() => navigate('/qrcode')}>Quét Mã</button>
+            <button className='btn transparent' onClick={() => navigate('/ranking')}>Xếp Hạng</button>
           </div>
 
           <div className='videoDiv'>

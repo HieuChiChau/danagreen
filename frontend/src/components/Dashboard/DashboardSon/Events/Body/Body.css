@@ -37,7 +37,7 @@
   z-index: 1;
   mix-blend-mode: hard-light;
 }
-.home video {
+.home img {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -57,7 +57,7 @@
   align-items: stretch;
   justify-content: center;
   margin: auto;
-  color: var(--whiteColor);
+  color: var(--blackColor);
   z-index: 100;
 }
 .home .homeContent .textDiv {
@@ -83,11 +83,12 @@
   color: var(--textColor);
   margin: 1rem 0;
   z-index: 2;
+  font-size: 18px;
+  background: var(--paleGreen);
 }
 .main .secTitle .title::after {
   position: absolute;
   content: "";
-  background: var(--paleGreen);
   height: 5px;
   width: 120px;
   right: 0;
