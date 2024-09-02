@@ -28,7 +28,7 @@
   padding-left: 200px;
   padding-right: 200px;
   border: 1px solid black;
-  background-image: url('../../../../assets/background.jpg');
+  background-image: url('../../../../assets/main_bg.jpg');
   
 }
 
@@ -43,11 +43,11 @@
 .leaderboard table {
   width: 100%;
   border-collapse: separate; /* Thay đổi từ collapse sang separate */
-  border-spacing: 0 10px; /* Khoảng cách giữa các hàng */
+  border-spacing: 0 6px; /* Khoảng cách giữa các hàng */
 }
 
 .leaderboard th, .leaderboard td {
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   font-size: 18px;
 }
@@ -78,11 +78,6 @@
     transition: all 0.3s ease-in-out 0s;
     margin-top: 40px;
     margin-bottom: 30px;
-}
-
-
-.leaderboard tr:nth-child(even) {
-  background-color: #f9f9f9;
 }
 
 .leaderboard tr:hover {
@@ -121,8 +116,8 @@
 }
 
 .leaderboard th:nth-child(3), .leaderboard td:nth-child(3) {
-  width: 150px; /* Chiều rộng cho cột score */
-  text-align: right;
+  width: 400px; /* Chiều rộng cho cột score */
+  text-align: center;
 }
 .pagination {
   display: flex;

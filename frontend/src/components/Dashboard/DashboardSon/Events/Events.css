@@ -35,6 +35,7 @@ li{
 .containerr{
   font-size: 1.5rem;
   cursor: pointer;
+  background-image: url('../../../../assets/main_bg.jpg');
 }
 .flexx{
   display: flex;

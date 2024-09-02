@@ -27,6 +27,7 @@
     background-color: var(--whiteColor);
     border-radius: 12px;
     box-shadow: 0 4px 8px var(--greyText);
+    background-image: url('../../../../assets/main_bg.jpg');
   }
   
   .report-issue-containe h1 {
@@ -46,6 +47,7 @@
     color: var(--blackColor);
     font-size: 1.3rem;
     padding-top: 2rem;
+    font-weight: 700;
   }
   
   .details-wrapper textarea {
@@ -107,22 +109,20 @@
 /* Container for the list of radio buttons */
 .radio-list {
     display: flex;
-    flex-direction: column; /* Align items vertically */
+    flex-direction: column; 
   }
-  
-  /* Style for each radio item */
+
   .radio-item {
-    margin-bottom: 1.3rem; /* Adjust the space between rows */
+    margin-bottom: 1.3rem;
+    font-weight: 600;
   }
-  
-  /* Hide default radio button */
+
   .radio-item input[type="radio"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
   }
-  
-  /* Custom radio button style */
+
   .radio-item input[type="radio"] + label {
     position: relative;
     padding-left: 3rem; /* Space for the custom radio button */

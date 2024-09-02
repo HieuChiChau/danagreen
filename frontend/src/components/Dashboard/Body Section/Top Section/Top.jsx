@@ -1,38 +1,53 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Top.css'
 import { useNavigate } from 'react-router-dom';
-
+import User from '../../../../api/user'
 //Import Icons ===>
 import { BiSearchAlt } from 'react-icons/bi'
 import { TbMessageCircle } from 'react-icons/tb'
 import { IoNotificationsOutline } from 'react-icons/io5'
 import { BsArrowRightShort, BsQuestionCircle } from 'react-icons/bs'
+import { FaInstagram } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa6";
 
 //Import Images=====>
-import img from '../../../../assets/user.jpg'
+import img from '../../../../assets/plantAvatar.png'
 import imggif from '../../../../assets/main_db.webp'
 import img_trs from '../../../../assets/bin-transparent.png'
 
 const Top = () => {
-
+  const [username, setUsername] = useState('');
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const token = localStorage.getItem('authToken');
+      console.log('>>>> Check token: ' + token);
+      try {
+        const data = await User.getProfile(token);
+        setUsername(data.username);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
+    };
+    fetchProfile();
+  }, []);
 
   return (
     <div className='topSection'>
       <div className='headerSection flex'>
         <div className='title'>
           <h1>Chào mừng đến với DANAGreen!</h1>
-          <p>Xin chào HieuChau, rất vui được gặp lại!</p>
+          <p>Xin chào {username}, rất vui được gặp lại!</p>
         </div>
 
-        <div className='searchbar flex'>
+        {/* <div className='searchbar flex'>
           <input type='text' placeholder='Tìm kiếm ...' />
           <BiSearchAlt className='icon' />
-        </div>
-
+        </div> */}
         <div className='adminDiv flex'>
-          <TbMessageCircle className='icon' />
-          <IoNotificationsOutline className='icon' />
+          <a href=''><FaInstagram className='icon' /></a>
+          <a href='https://www.facebook.com/profile.php?id=61565393033018'><FaFacebook className='icon' /></a>
           <div className='adminImage'>
             <img src={img} alt='' onClick={() => navigate('/profile')} />
           </div>
@@ -86,7 +101,7 @@ const Top = () => {
 
                 <h3>Hướng dẫn sử dụng</h3>
                 <p>Nếu bạn chưa biết cách sử dụng DANAGreen. Hãy đọc ngay hướng dẫn sử dụng.</p>
-                <button className='btn'>Đọc hướng dẫn</button>
+                <button className='btn' onClick={() => navigate('/instruction')}>Đọc hướng dẫn</button>
               </div>
             </div>
           </div>

@@ -84,5 +84,7 @@
   .activitySection .heading .btn {
     height: 40px;
     font-weight: 500;
+    width: 130px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=Activity.css.map */

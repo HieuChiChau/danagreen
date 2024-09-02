@@ -8,22 +8,14 @@ const HistorySchema = new Schema({
         ref: 'User',
         required: true
     },
-    metal: {
-        type: Number,
-        default: 0
-    },
-    plastic: {
-        type: Number,
-        default: 0
-    },
-    paper: {
-        type: Number,
-        default: 0
-    },
-    date: {
-        type: Date,
-        default: Date.now
+    trash: {
+        metal: { type: Number, default: 0 },
+        plastic: { type: Number, default: 0 },
+        paper: { type: Number, default: 0 },
+        date: { type: Date, default: Date.now },
+        randomNumber: { type: Number, default: 0 }
     }
+
 });
 
 module.exports = mongoose.model('History', HistorySchema);

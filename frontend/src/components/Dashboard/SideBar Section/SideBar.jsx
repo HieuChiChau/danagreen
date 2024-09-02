@@ -13,6 +13,8 @@ import { FaUserEdit } from "react-icons/fa";
 import { RiLockPasswordLine, RiLogoutBoxLine } from "react-icons/ri";
 import { LuHelpingHand } from "react-icons/lu";
 import { GoGift } from "react-icons/go";
+import { FaInstagram } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa6";
 
 const SideBar = () => {
 
@@ -23,6 +25,8 @@ const SideBar = () => {
       <div className='logoDiv flex'>
         <img src={logo} alt='Image Name' />
         <h2>DANAGreen.</h2>
+        <a href='https://www.facebook.com/profile.php?id=61565393033018'><FaInstagram className='icon' /></a>
+        <a href=''><FaFacebook className='icon' /></a>
       </div>
 
       <div className='menuDiv'>
@@ -139,7 +143,7 @@ const SideBar = () => {
 
           <h3>Hướng dẫn sử dụng</h3>
           <p>Nếu bạn chưa biết cách sử dụng DANAGreen. Hãy đọc ngay hướng dẫn sử dụng.</p>
-          <button className='btn'>Đọc hướng dẫn</button>
+          <button className='btn' onClick={() => navigate('/instruction')}>Đọc hướng dẫn</button>
         </div>
       </div>
     </div>

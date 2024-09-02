@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Helper.css'
 import { useNavigate } from 'react-router-dom';
 import SupportAPI from '../../../../api/support';
+import { toast } from 'react-toastify';
 
 const Helper = () => {
   const [selectedIssue, setSelectedIssue] = useState('');
@@ -12,20 +13,19 @@ const Helper = () => {
   const issues = [
     'Lỗi hiển thị trên trang',
     'Không thể đăng nhập',
-    'Tốc độ tải chậm',
-    'Lỗi CSS trên thiết bị di động',
-    'Liên kết không hoạt động',
-    'Lỗi JavaScript',
-    'Phản hồi không đầy đủ',
-    'Vấn đề bảo mật',
-    'Lỗi trong quy trình đặt hàng',
+    'Không thể chỉnh sửa thông tin',
+    'Không thể chỉnh sửa mật khẩu',
+    'Tốc độ trang web chậm',
+    'Không thể quét QR',
+    'Lỗi trong quá trình tích điểm',
+    'Lỗi bảo mật',
     'Khác'
   ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!selectedIssue) {
-      alert('Vui lòng chọn một lỗi.');
+      toast.error('Vui lòng chọn một lỗi.');
       return;
     }
 
@@ -34,10 +34,10 @@ const Helper = () => {
     try {
       const token = localStorage.getItem('authToken');
       await SupportAPI.reportIssue(token, selectedIssue, details);
-      alert('Báo cáo lỗi đã được gửi thành công!');
+      toast.success('Báo cáo lỗi đã được gửi thành công!');
       navigate('/dashboard');
     } catch (error) {
-      alert('Có lỗi xảy ra khi gửi báo cáo.');
+      toast.error('Có lỗi xảy ra khi gửi báo cáo.');
     }
   };
 

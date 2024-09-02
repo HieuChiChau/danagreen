@@ -64,7 +64,7 @@
   box-shadow: 0 2px 2px var(--inputColor);
 }
 .listingSection .secContainer .singleItem img {
-  max-width: 100px;
+  max-width: 145px;
 }
 .listingSection .secContainer .singleItem .icon {
   position: absolute;
@@ -149,9 +149,11 @@
     width: 110px;
   }
   .sellers .topSellers .btn {
-    width: 120px;
+    width: 100px;
+    font-size: 12px;
   }
   .featuredSellers .heading .btn {
-    width: 120px;
+    width: 100px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=Listing.css.map */

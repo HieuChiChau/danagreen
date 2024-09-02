@@ -80,10 +80,11 @@
   position: relative;
   width: -moz-max-content;
   width: max-content;
-  color: var(--textColor);
+  color: var(--blackColor);
+  font-weight: 800;
   margin: 1rem 0;
   z-index: 2;
-  font-size: 18px;
+  font-size: 20px;
   background: var(--paleGreen);
 }
 .main .secTitle .title::after {

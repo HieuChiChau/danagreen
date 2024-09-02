@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Password.css'
 import User from '../../../../api/user'
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Password = () => {
 
@@ -16,14 +17,14 @@ const Password = () => {
     e.preventDefault();
 
     if (newPassword !== confirmPassword) {
-      setError('Xác nhận mạt khẩu không hợp lệ');
+      setError('Xác nhận mật khẩu không hợp lệ');
       return;
     }
 
     try {
       const token = localStorage.getItem('authToken');
       await User.updatePassword(token, { oldPassword: currentPassword, newPassword });
-      alert('Đổi mật khẩu thành công');
+      toast.success('Đổi mật khẩu thành công');
       navigate('/dashboard');
     } catch (error) {
       console.error('Error updating password:', error);

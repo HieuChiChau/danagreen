@@ -1,8 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Voucher.css'
-import img1 from '../../../../assets/event1.jpg'
-import img2 from '../../../../assets/event2.jpg'
+import img from '../../../../assets/voucher.jpg'
 
 const Voucher = () => {
     const navigate = useNavigate()
@@ -12,7 +11,7 @@ const Voucher = () => {
             title: "Voucher Giảm Giá 10%",
             description: "Giảm ngay 10% cho tất cả các đơn hàng từ 500.000đ.",
             expiryDate: "2024-09-30",
-            image: img1,
+            image: img,
             code: "DISCOUNT10"
         },
         {
@@ -20,7 +19,7 @@ const Voucher = () => {
             title: "Voucher Miễn Phí Vận Chuyển",
             description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
             expiryDate: "2024-10-15",
-            image: img2,
+            image: img,
             code: "FREESHIP"
         },
         {
@@ -28,7 +27,7 @@ const Voucher = () => {
             title: "Voucher Miễn Phí Vận Chuyển",
             description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
             expiryDate: "2024-10-15",
-            image: img2,
+            image: img,
             code: "FREESHIP"
         },
         {
@@ -36,7 +35,7 @@ const Voucher = () => {
             title: "Voucher Giảm Giá 10%",
             description: "Giảm ngay 10% cho tất cả các đơn hàng từ 500.000đ.",
             expiryDate: "2024-09-30",
-            image: img1,
+            image: img,
             code: "DISCOUNT10"
         },
         {
@@ -44,7 +43,7 @@ const Voucher = () => {
             title: "Voucher Miễn Phí Vận Chuyển",
             description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
             expiryDate: "2024-10-15",
-            image: img2,
+            image: img,
             code: "FREESHIP"
         },
         {
@@ -52,7 +51,7 @@ const Voucher = () => {
             title: "Voucher Miễn Phí Vận Chuyển",
             description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
             expiryDate: "2024-10-15",
-            image: img2,
+            image: img,
             code: "FREESHIP"
         },
         {
@@ -60,73 +59,9 @@ const Voucher = () => {
             title: "Voucher Giảm Giá 10%",
             description: "Giảm ngay 10% cho tất cả các đơn hàng từ 500.000đ.",
             expiryDate: "2024-09-30",
-            image: img1,
+            image: img,
             code: "DISCOUNT10"
-        },
-        {
-            id: 8,
-            title: "Voucher Miễn Phí Vận Chuyển",
-            description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
-            expiryDate: "2024-10-15",
-            image: img2,
-            code: "FREESHIP"
-        },
-        {
-            id: 9,
-            title: "Voucher Miễn Phí Vận Chuyển",
-            description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
-            expiryDate: "2024-10-15",
-            image: img2,
-            code: "FREESHIP"
-        },
-        {
-            id: 10,
-            title: "Voucher Giảm Giá 10%",
-            description: "Giảm ngay 10% cho tất cả các đơn hàng từ 500.000đ.",
-            expiryDate: "2024-09-30",
-            image: img1,
-            code: "DISCOUNT10"
-        },
-        {
-            id: 11,
-            title: "Voucher Miễn Phí Vận Chuyển",
-            description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
-            expiryDate: "2024-10-15",
-            image: img2,
-            code: "FREESHIP"
-        },
-        {
-            id: 12,
-            title: "Voucher Miễn Phí Vận Chuyển",
-            description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
-            expiryDate: "2024-10-15",
-            image: img2,
-            code: "FREESHIP"
-        },
-        {
-            id: 13,
-            title: "Voucher Giảm Giá 10%",
-            description: "Giảm ngay 10% cho tất cả các đơn hàng từ 500.000đ.",
-            expiryDate: "2024-09-30",
-            image: img1,
-            code: "DISCOUNT10"
-        },
-        {
-            id: 14,
-            title: "Voucher Miễn Phí Vận Chuyển",
-            description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
-            expiryDate: "2024-10-15",
-            image: img2,
-            code: "FREESHIP"
-        },
-        {
-            id: 15,
-            title: "Voucher Miễn Phí Vận Chuyển",
-            description: "Miễn phí vận chuyển cho đơn hàng từ 300.000đ.",
-            expiryDate: "2024-10-15",
-            image: img2,
-            code: "FREESHIP"
-        },
+        }
         // Thêm các voucher khác nếu cần
     ]
 

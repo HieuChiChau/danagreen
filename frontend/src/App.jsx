@@ -21,6 +21,7 @@ import Password from './components/Dashboard/DashboardSon/Password/Password'
 import History from './components/Dashboard/DashboardSon/History/History'
 import Voucher from './components/Dashboard/DashboardSon/Voucher/Voucher'
 import MyVoucher from './components/Dashboard/DashboardSon/Voucher/MyVoucher'
+import Instruction from './components/Dashboard/DashboardSon/Instruction/Instruction'
 const App = () => {
 
   const [playState, setPlayState] = useState(false)
@@ -60,6 +61,7 @@ const App = () => {
         <Route path='/history' element={<History />} />
         <Route path='/voucher' element={<Voucher />} />
         <Route path='/myvoucher' element={<MyVoucher />} />
+        <Route path='/instruction' element={<Instruction />} />
       </Routes>
     </Router>
   )

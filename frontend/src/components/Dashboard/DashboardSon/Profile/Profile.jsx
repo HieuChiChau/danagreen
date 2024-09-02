@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Profile.css';
-import user from '../../../../assets/user-profile.png';
+import user from '../../../../assets/plantAvatar.jpg';
 import { useNavigate } from 'react-router-dom';
 import User from '../../../../api/user';
+import { toast } from 'react-toastify';
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
@@ -28,6 +29,7 @@ const Profile = () => {
         setAddress(data.profile.address || '');
       } catch (error) {
         console.error('Error fetching profile:', error);
+        toast.error('Lỗi khi tải thông tin hồ sơ.');
       } finally {
         setLoading(false);
       }
@@ -40,9 +42,10 @@ const Profile = () => {
     const token = localStorage.getItem('authToken');
     try {
       await User.updateProfile(token, { username, phone, birthDate, hobby, address });
-      alert('Profile updated successfully');
+      toast.success('Cập nhật hồ sơ thành công!');
     } catch (error) {
       console.error('Error updating profile:', error);
+      toast.error('Lỗi khi cập nhật hồ sơ.');
     }
   };
 
@@ -63,7 +66,7 @@ const Profile = () => {
         </button>
       </div>
 
-      <p className='separator'><span>Information</span></p>
+      <p className='separator'><span>Thông tin cá nhân</span></p>
 
       <form onSubmit={handleUpdate} className='profilee-form'>
         <div className='input-wrapper'>
@@ -79,7 +82,7 @@ const Profile = () => {
           <i className="material-symbols-rounded">calendar_month</i>
         </div>
         <div className='input-wrapper'>
-          <input type='text' value={hobby} onChange={(e) => setHobby(e.target.value)} />
+          <input type='text' value={hobby} onChange={(e) => setHobby(e.target.value)} placeholder='Sở thích' />
           <i className="material-symbols-rounded">emoji_events</i>
         </div>
         <div className='input-wrapper'>

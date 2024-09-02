@@ -1,0 +1,127 @@
+/* Lớp bao bọc để tách biệt với các quy tắc CSS khác */
+.instruction-wrapper {
+    width: 100%;
+    text-align: left; /* Ghi đè text-align: center của body */
+    padding: 20px;
+}
+
+.instruction-wrapper .instruction-container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.instruction-container h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+/* Các quy tắc CSS chi tiết bên trong .instruction-container */
+.part_one, .part-two {
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* Tiêu đề lớn */
+.part_one h2, .part-two h2 {
+    font-size: 24px;
+    color: #2c7a7b;
+    margin-bottom: 15px;
+}
+.xiuuu{
+    width: 14px;
+    height: 14px;
+}
+/* Đoạn văn bản */
+.part_one p, .part-two p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.instruction-wrapper .instruction-container span{
+    color: #1DA1F2;
+}
+.instruction-wrapper .instruction-container a {
+    color: #1a0dab; /* Màu mặc định của liên kết, bạn có thể thay đổi màu theo ý muốn */
+    text-decoration: underline; /* Gạch chân liên kết */
+    font-weight: normal; /* Tùy chọn, nếu bạn muốn thay đổi độ đậm của chữ */
+}
+
+/* Màu và kiểu gạch chân khi di chuột qua liên kết */
+.instruction-wrapper .instruction-container a:hover {
+    color: #1a0dab; /* Màu liên kết khi di chuột qua, có thể thay đổi nếu muốn */
+    text-decoration: underline; /* Gạch chân khi di chuột qua */
+}
+
+/* Danh sách gạch đầu dòng */
+.part_one ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.part_one ul li {
+    margin-bottom: 10px;
+}
+
+/* Chữ in đậm */
+.part_one ul li strong {
+    color: #2c7a7b;
+}
+
+/* Tiêu đề nhỏ */
+.part-two h3, .part-two h4, .part-two h5 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2c7a7b;
+}
+
+/* Hình ảnh */
+.part-two img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.part-two p {
+    margin-bottom: 10px;
+}
+
+.part-two strong {
+    font-weight: bold;
+    color: #2c7a7b;
+}
+
+.part-two h5 {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.part-two ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.part-two ul li {
+    margin-bottom: 5px;
+}
+.instruction-wrapper .instruction-container .back-button {
+    background-color: #2c7a7b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.instruction-wrapper .instruction-container .back-button:hover {
+    background-color:  #1f5d5b;
+}
+

@@ -1,118 +1,112 @@
+/* History.css */
 .trash-history-container {
-    max-width: 700px;
-    margin: auto;
-    padding-right: 6rem;
-    padding-left: 6rem;
-    background-color: var(--whiteColor);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px var(--greyText);
-    padding-bottom: 10rem;
-  }
-  
-  .trash-history-container h2 {
-    text-align: center;
-    color: var(--blackColor);
-    font-size: 1.8rem;
-    margin-bottom: 3rem;
-    padding-top: 5rem;
-  }
-  
-  .trash-history-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .trash-history-table th,
-  .trash-history-table td {
-    padding: 1.3rem;
-    text-align: left;
-    border-bottom: 1px solid var(--greyText);
-    font-size: 1.5rem;
-  }
-  
-  .trash-history-table th {
-    background-color: var(--PrimaryColor);
-    color: var(--whiteColor);
-    padding-bottom: 1rem;
-  }
-  
-  .trash-history-table tr:nth-child(even) {
-    background-color: var(--paleGreen);
-  }
-  .button-backkk{
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--PrimaryColor);
-    color: var(--whiteColor);
-    font-size: var(--h2FontSize);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out 0s;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 2rem;
-  }
-  .button-backkk:hover{
-    background-color: var(--HoverColor);
-    transform: scale(1.02);
-    color: black;
-  }
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  background-image: url('../../../../assets/main_bg.jpg');
+}
 
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-  
-  .pagination button {
-    padding: 0.5rem 1rem;
-    margin: 0 0.3rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--PrimaryColor);
-    color: var(--whiteColor);
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .pagination button.active {
-    background-color: var(--HoverColor);
-  }
-  
-  .pagination button:hover {
-    background-color: var(--HoverColor);
-  }
-  
-  @media screen and (max-width: 450px) {
-    .trash-history-container {
-      padding-right: 1rem;
-      padding-left: 1rem;
-      padding-bottom: 3rem;
-    }
-  
-    .trash-history-container h2 {
-      font-size: 1.4rem;
-      padding-top: 2rem;
-      margin-bottom: 2rem;
-    }
-  
-    .trash-history-table th,
-    .trash-history-table td {
-      font-size: 1.2rem;
-      padding: 0.8rem;
-    }
-  
-    .trash-history-table th {
-      padding-bottom: 0.8rem;
-    }
-  
-    .button-backkk {
-      padding: 0.8rem;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-    }
-  }
-  
-  
-  
+.trash-history-container h2{
+  padding-bottom: 10px;
+}
+
+.trash-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+}
+
+.trash-history-table th, .trash-history-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.trash-history-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  border-bottom: 1px solid #555;
+}
+
+.trash-history-table tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: palegreen;
+}
+
+.trash-history-table tr:hover {
+  background-color: #e0f7fa;
+}
+
+.trash-history-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.trash-history-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.trash-history-details p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.trash-history-details strong {
+  color: #333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+  background-color: #45a049;
+}
+
+.pagination button:hover {
+  background-color: #3e8e41;
+}
+
+.button-backkk {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.button-backkk:hover {
+  background-color: #45a049;
+}

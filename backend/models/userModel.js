@@ -19,10 +19,10 @@ const UserSchema = new Schema({
         required: true,
     },
     profile: {
-        phone: { type: String, default: '7 cỏ' },
+        phone: { type: String, default: '' },
         birthDate: { type: Date, default: null },
-        hobby: { type: String, default: '7 cỏ' },
-        address: { type: String, default: '7 cỏ' },
+        hobby: { type: String, default: '' },
+        address: { type: String, default: '' },
         image: { type: String, default: '' }
     },
     score: {

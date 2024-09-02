@@ -3,7 +3,7 @@ import axios from 'axios';
 class UserAPI {
     static async getProfile(token) {
         try {
-            const response = await axios.get('https://192.168.5.3:3000/api/user/profile', {
+            const response = await axios.get('https://192.168.1.241:3000/api/user/profile', {
                 headers: {
                     'authorization': `Bearer ${token}`
                 }
@@ -25,7 +25,7 @@ class UserAPI {
 
     static async updateProfile(token, profileData) {
         try {
-            const response = await axios.put('https://192.168.5.3:3000/api/user/updateprofile', profileData, {
+            const response = await axios.put('https://192.168.1.241:3000/api/user/updateprofile', profileData, {
                 headers: {
                     'authorization': `Bearer ${token}`
                 }
@@ -47,7 +47,7 @@ class UserAPI {
 
     static async updatePassword(token, passwordData) {
         try {
-            const response = await axios.put('https://192.168.5.3:3000/api/user/updatepassword', passwordData, {
+            const response = await axios.put('https://192.168.1.241:3000/api/user/updatepassword', passwordData, {
                 headers: {
                     'authorization': `Bearer ${token}`
                 }
@@ -55,6 +55,21 @@ class UserAPI {
             return response.data;
         } catch (error) {
             console.error('Error updating password:', error);
+            throw error;
+        }
+    }
+
+    static async getUsers(token) {
+        try {
+            const response = await axios.get('https://192.168.1.241:3000/api/user/users', {
+                headers: {
+                    'authorization': `Bearer ${token}`
+                }
+            })
+
+            return response.data
+        } catch (error) {
+            console.error('Error fetching users:', error);
             throw error;
         }
     }

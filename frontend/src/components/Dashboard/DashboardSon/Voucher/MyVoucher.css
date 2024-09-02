@@ -26,6 +26,7 @@
     background-color: var(--whiteColor);
     border-radius: 12px;
     box-shadow: 0 4px 8px var(--greyText);
+    background-image: url('../../../../assets/main_bg.jpg');
 }
 
 .voucher-header {

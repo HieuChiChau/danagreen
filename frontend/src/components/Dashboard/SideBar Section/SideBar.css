@@ -27,6 +27,8 @@
   overflow: auto;
 }
 .sideBar .logoDiv {
+  display: flex;
+  align-items: center;
   padding: 1.5rem 1.5rem 0;
   cursor: pointer;
 }
@@ -40,6 +42,7 @@
 .sideBar .logoDiv h2 {
   font-size: var(--h2FontSize);
   color: var(--PrimaryColor);
+  padding-right: 10px;
 }
 .sideBar .menuDiv .divTitle, .sideBar .settingsDiv .divTitle {
   font-size: var(--h3FontSize);
@@ -164,8 +167,24 @@
   .sideBar .logoDiv h2 {
     display: none;
   }
+  .sideBar .logoDiv img {
+    margin-bottom: 5px;
+  }
+  .sideBar .logoDiv a {
+    margin-top: 5px;
+  }
 }
 @media screen and (max-width: 745px) {
+  .sideBar .logoDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sideBar .logoDiv img {
+    margin-bottom: 5px;
+  }
+  .sideBar .logoDiv a {
+    margin-top: 10px;
+  }
   .menuDiv .divTitle, .menuDiv .smallText, .settingsDiv .divTitle, .settingsDiv .smallText {
     display: none;
   }

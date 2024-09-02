@@ -26,6 +26,7 @@
     background-color: var(--whiteColor);
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--greyText);
+    background-image: url('../../../../assets/main_bg.jpg');
   }
   
   .form-title {
@@ -75,7 +76,7 @@
     background-color: var(--bgColor);
     padding: 0 1rem;
     font-size: var(--normalFontSize);
-    color: var(--textColor);
+    color: red;
     font-size: 1.2rem;
   }
   

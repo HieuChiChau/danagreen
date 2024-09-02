@@ -32,7 +32,7 @@ app.use(morgan('dev'))
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api', supportRoutes)
-app.use('api/history', historyRoutes)
+app.use('/api/history', historyRoutes)
 
 // app.listen(port, host, () => {
 //     console.log(`App listening at http://${host}:${port}`);

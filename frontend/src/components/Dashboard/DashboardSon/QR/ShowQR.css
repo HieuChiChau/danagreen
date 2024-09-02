@@ -19,6 +19,7 @@
     box-shadow: 0 0 15px var(--shadowColor);
     max-width: 500px;
     margin: 0 auto;
+    background-image: url('../../../../assets/main_bg.jpg');
   }
   
   .showQR h2 {
@@ -70,5 +71,12 @@
 
 .backButton:hover {
   background-color: var(--hoverColor);
+}
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
 }
   
