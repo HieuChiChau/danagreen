@@ -99,15 +99,57 @@
     font-size: var(--h2FontSize);
     margin: 0;
 }
+.filter-brand {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.filter-brand label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.filter-brand select {
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.filter-brand select:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #e9f5ff;
+}
+
+.filter-brand option {
+    font-size: 16px;
+}
+
+
 
 .voucher-description {
-    font-size: var(--normalFontSize); /* Sử dụng biến font-size */
+    font-size: var(--normalFontSize);
     margin: 10px 0;
 }
 
 .voucher-expiry-date {
-    color: var(--textColor); /* Sử dụng biến màu văn bản */
-    font-size: var(--smallFontSize); /* Sử dụng biến font-size */
+    color: var(--textColor);
+    font-size: var(--normalFontSize);
+}
+.voucher-point{
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: var(--PrimaryColor);
 }
 
 .voucher-actions {
@@ -116,21 +158,18 @@
     margin-top: 10px;
 }
 
-.use-voucher-button, .copy-code-button {
-    padding: 10px 50px;
+.voucher-actions .use-voucher-button{
+    padding: 10px 65px;
     border: none;
-    border-radius: 6px; /* Tăng border-radius của nút */
-    color: var(--whiteColor); /* Sử dụng biến màu chữ */
     cursor: pointer;
-    font-size: var(--normalFontSize); /* Sử dụng biến font-size */
+    font-size: 15px;
 }
-
-.use-voucher-button {
-    background-color: var(--PrimaryColor); /* Sử dụng biến màu nền */
+.voucher-actions .use-voucher-button:hover{
+    background-color: var(--HoverColor);
 }
 
 .copy-code-button {
-    background-color: var(--textColor); /* Sử dụng biến màu nền */
+    background-color: var(--textColor);
 }
 .bakk{
     text-align: center;

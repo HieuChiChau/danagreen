@@ -144,7 +144,7 @@
   color: var(--textColor);
   font-size: 18px;
 }
-.main .secContent .singleDestination .cardInfo .continent .name {
+.main .secContent .singleDestination .cardInfo .continent .location {
   color: var(--textColor);
   font-weight: 400;
   font-size: 14px;
@@ -157,7 +157,7 @@
   border-top: 1.5px solid var(--greyText);
   border-bottom: 1.5px solid var(--greyText);
 }
-.main .secContent .singleDestination .cardInfo .fees .grade {
+.main .secContent .singleDestination .cardInfo .fees .time {
   color: var(--textColor);
   max-width: 200px;
   line-height: 30px;
@@ -166,7 +166,7 @@
   justify-content: center;
   font-size: 17px;
 }
-.main .secContent .singleDestination .cardInfo .fees .grade small {
+.main .secContent .singleDestination .cardInfo .fees .time small {
   text-align: center;
   background: var(--PrimaryColor);
   border-radius: 1rem;

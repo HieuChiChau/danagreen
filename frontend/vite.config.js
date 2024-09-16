@@ -5,7 +5,7 @@ import fs from 'fs';
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '192.168.1.241',
+    host: '192.168.5.2',
     port: 5173,
     https: {
       key: fs.readFileSync('E:/InTE/danagreen/backend/key.pem'),

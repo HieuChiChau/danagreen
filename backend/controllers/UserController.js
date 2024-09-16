@@ -1,6 +1,5 @@
 const User = require('../models/userModel');
 const History = require('../models/historyModel')
-const bcrypt = require('bcryptjs')
 
 class UserController {
 

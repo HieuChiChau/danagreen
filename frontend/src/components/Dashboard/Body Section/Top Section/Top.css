@@ -36,6 +36,10 @@
   color: var(--textColor);
   font-weight: 500;
 }
+.topSection .headerSection .title p span {
+  font-weight: 700;
+  color: #000;
+}
 .topSection .headerSection .searchbar {
   padding: 1rem 4rem;
   background: var(--whiteColor);

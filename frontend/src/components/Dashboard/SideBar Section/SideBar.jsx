@@ -16,9 +16,16 @@ import { GoGift } from "react-icons/go";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 
+import UserAPI from '../../../api/user';
+
 const SideBar = () => {
 
   const navigate = useNavigate()
+
+  const handleLogout = () => {
+    UserAPI.logout()
+    navigate('/')
+  }
 
   return (
     <div className='sideBar grid'>
@@ -124,7 +131,7 @@ const SideBar = () => {
             </a>
           </li>
 
-          <li className='listItem' onClick={() => navigate('/')}>
+          <li className='listItem' onClick={handleLogout}>
             <a href='#' className='menuLink flex'>
               <RiLogoutBoxLine className='icon' />
               <span className='smallText'>

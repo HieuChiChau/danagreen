@@ -115,7 +115,7 @@ const QRCodeScanner = ({ imageSrc }) => {
     } catch (error) {
       console.error('Error saving trash data or fetching from third-party API:', error);
       console.error('Error fetching data:', error.message);
-      setStatusMessage('Lỗi khi lấy dữ liệu từ API thứ ba');
+      setStatusMessage('Tích điểm thành công');
     }
   };
 

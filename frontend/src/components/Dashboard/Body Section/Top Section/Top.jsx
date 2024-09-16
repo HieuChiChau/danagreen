@@ -38,7 +38,7 @@ const Top = () => {
       <div className='headerSection flex'>
         <div className='title'>
           <h1>Chào mừng đến với DANAGreen!</h1>
-          <p>Xin chào {username}, rất vui được gặp lại!</p>
+          <p>Xin chào <span>{username}</span>, rất vui được gặp lại!</p>
         </div>
 
         {/* <div className='searchbar flex'>

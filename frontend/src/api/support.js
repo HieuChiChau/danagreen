@@ -3,7 +3,7 @@ import axios from 'axios';
 class SupportAPI {
     static async reportIssue(token, issue, details) {
         try {
-            const response = await axios.post('https://192.168.1.241:3000/api/support',
+            const response = await axios.post('https://192.168.5.2:3000/api/support',
                 { issue, details },
                 {
                     headers: {

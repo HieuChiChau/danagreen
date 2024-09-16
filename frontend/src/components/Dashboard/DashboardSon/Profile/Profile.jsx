@@ -43,6 +43,7 @@ const Profile = () => {
     try {
       await User.updateProfile(token, { username, phone, birthDate, hobby, address });
       toast.success('Cập nhật hồ sơ thành công!');
+      navigate('/dashboard')
     } catch (error) {
       console.error('Error updating profile:', error);
       toast.error('Lỗi khi cập nhật hồ sơ.');

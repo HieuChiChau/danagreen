@@ -15,9 +15,11 @@ const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
 const supportRoutes = require('./routes/supportRoutes')
 const historyRoutes = require('./routes/historyRoutes')
-
+const voucherRoutes = require('./routes/voucherRoutes')
+const eventRoutes = require('./routes/eventRoutes')
 const connectDB = require('./config/db')
-
+const imageRoutes = require('./routes/imageRoutes');
+const eventParticipantRoutes = require('./routes/eventParticipantRoutes')
 connectDB.connect()
 
 app.use(cors({
@@ -33,7 +35,10 @@ app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api', supportRoutes)
 app.use('/api/history', historyRoutes)
-
+app.use('/api/voucher', voucherRoutes)
+app.use('/api/event', eventRoutes)
+app.use('/api/images', imageRoutes);
+app.use('/api/participant', eventParticipantRoutes);
 // app.listen(port, host, () => {
 //     console.log(`App listening at http://${host}:${port}`);
 // });

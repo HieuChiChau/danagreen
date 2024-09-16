@@ -5,7 +5,7 @@ class HistoryAPI {
     static async saveQRCodeResult(token, trash) {
         try {
             console.log('trash ;', trash)
-            const response = await axios.post('https://192.168.1.241:3000/api/history/saveqrcoderesult', { trash }, {
+            const response = await axios.post('https://192.168.5.2:3000/api/history/saveqrcoderesult', { trash }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -19,7 +19,7 @@ class HistoryAPI {
 
     static async getHistory() {
         try {
-            const response = await axios.get('https://192.168.1.241:3000/api/history/me', {
+            const response = await axios.get('https://192.168.5.2:3000/api/history/me', {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('authToken')}` // Nếu cần
                 }
@@ -33,7 +33,7 @@ class HistoryAPI {
 
     static async getHistoryById(id) {
         try {
-            const response = await axios.get(`https://192.168.1.241:3000/api/history/detail/${id}`, {
+            const response = await axios.get(`https://192.168.5.2:3000/api/history/detail/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('authToken')}`
                 }
@@ -47,7 +47,7 @@ class HistoryAPI {
 
     static async getAllRecentActivities() {
         try {
-            const response = await axios.get('https://192.168.1.241:3000/api/history/all-recent-activities');
+            const response = await axios.get('https://192.168.5.2:3000/api/history/all-recent-activities');
             return response.data
         } catch (error) {
             console.error('Lỗi khi lấy hoạt động gần đây:', error);
@@ -57,7 +57,7 @@ class HistoryAPI {
 
     static async getAllTrashData() {
         try {
-            const response = await axios.get('https://192.168.1.241:3000/api/history/allhistories')
+            const response = await axios.get('https://192.168.5.2:3000/api/history/allhistories')
             return response.data
         } catch (error) {
             console.error('Lỗi khi gọi API để lấy dữ liệu trash:', error);

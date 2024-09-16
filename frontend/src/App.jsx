@@ -22,6 +22,7 @@ import History from './components/Dashboard/DashboardSon/History/History'
 import Voucher from './components/Dashboard/DashboardSon/Voucher/Voucher'
 import MyVoucher from './components/Dashboard/DashboardSon/Voucher/MyVoucher'
 import Instruction from './components/Dashboard/DashboardSon/Instruction/Instruction'
+import EventDetail from './components/Dashboard/DashboardSon/EventDetail/EventDetail'
 const App = () => {
 
   const [playState, setPlayState] = useState(false)
@@ -62,6 +63,7 @@ const App = () => {
         <Route path='/voucher' element={<Voucher />} />
         <Route path='/myvoucher' element={<MyVoucher />} />
         <Route path='/instruction' element={<Instruction />} />
+        <Route path='/events/:id' element={<EventDetail />} />
       </Routes>
     </Router>
   )

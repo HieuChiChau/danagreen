@@ -3,7 +3,7 @@ import axios from 'axios';
 class AuthAPI {
     static async login(email, password) {
         try {
-            const response = await axios.post(`https://192.168.1.241:3000/api/auth/login`, {
+            const response = await axios.post('https://192.168.5.2:3000/api/auth/login', {
                 email,
                 password
             });
@@ -20,7 +20,7 @@ class AuthAPI {
 
     static async register(username, email, password) {
         try {
-            const response = await axios.post('https://192.168.1.241:3000/api/auth/register', {
+            const response = await axios.post('https://192.168.5.2:3000/api/auth/register', {
                 username,
                 email,
                 password,
