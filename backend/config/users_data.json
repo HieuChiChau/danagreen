@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "66d6292f425fec01f60196d2",
+    "username": "Chí Hiếu",
+    "email": "hieu@gmail.com",
+    "password": "$2a$10$0zy8lICxAekdenTM6yyIvufMsKYDSkUuGuBEciAhTD6EkZIJ8I4uW",
+    "profile": {
+      "phone": "",
+      "birthDate": null,
+      "hobby": "",
+      "address": "Gia Lai",
+      "image": ""
+    },
+    "score": 143,
+    "__v": 0
+  },
+  {
+    "_id": "66d6293e425fec01f60196d5",
+    "username": "Hoàng Tuấn",
+    "email": "tuan@gmail.com",
+    "password": "$2a$10$FOJGR9ESNWdrVXBgOOXLhOJpCfoa3oBJZdAWVh.GKsreL8pUOrrUG",
+    "profile": {
+      "phone": "",
+      "birthDate": null,
+      "hobby": "",
+      "address": "Đà Nẵng",
+      "image": ""
+    },
+    "score": 117,
+    "__v": 0
+  },
+  {
+    "_id": "66d62950425fec01f60196d8",
+    "username": "Phương Nhi",
+    "email": "nhi@gmail.com",
+    "password": "$2a$10$hDOeYLxClnDFW1RZ6WgoQORfiK5atE2hSL.CELhy5YKp7oArsBw5S",
+    "profile": {
+      "phone": "",
+      "birthDate": null,
+      "hobby": "",
+      "address": "Huế",
+      "image": ""
+    },
+    "score": 30,
+    "__v": 0
+  },
+  {
+    "_id": "66d6295f425fec01f60196db",
+    "username": "Khánh Quỳnh",
+    "email": "quynh@gmail.com",
+    "password": "$2a$10$q8TKug4e1VbuHefA6ZN1qOyxaEej/26pzeCLaGP16ZnnF/fv9mdZi",
+    "profile": {
+      "phone": "",
+      "birthDate": null,
+      "hobby": "",
+      "address": "Huế",
+      "image": ""
+    },
+    "score": 182,
+    "__v": 0
+  },
+  {
+    "_id": "66d62974425fec01f60196de",
+    "username": "Đức Lâm",
+    "email": "lam@gmail.com",
+    "password": "$2a$10$B0WqqtQjvdkvOBsk36y3/u2e9hvndXSWOJxyMMMWxokNqf4PxuNkq",
+    "profile": {
+      "phone": "",
+      "birthDate": null,
+      "hobby": "",
+      "address": "Đà Nẵng",
+      "image": ""
+    },
+    "score": 31,
+    "__v": 0
+  },
+  {
+    "_id": "66d62f86425fec01f6019a20",
+    "username": "Việt Hoàng",
+    "email": "hoang@gmail.com",
+    "password": "$2a$10$6TKWALm0pRVlICaCnplb2O11BW0ZmK1gPszwHks/DU1sUmzVXoMu.",
+    "profile": {
+      "phone": "0905456832",
+      "birthDate": "2004-05-03T00:00:00.000Z",
+      "hobby": "Đá bóng",
+      "address": "Huế",
+      "image": ""
+    },
+    "score": 19,
+    "__v": 0
+  },
+  {
+    "_id": "66d63017425fec01f6019ae5",
+    "username": "Khánh Linh",
+    "email": "linh123@gmail.com",
+    "password": "$2a$10$rTCPqF9iT9/Xyl1.1JQDfOOSawuKtR3i4f1WNiqiuGsQbaYmmCjAS",
+    "profile": {
+      "phone": "0312693211",
+      "birthDate": "2000-05-03T00:00:00.000Z",
+      "hobby": "May vá",
+      "address": "Đà Nẵng",
+      "image": ""
+    },
+    "score": 19,
+    "__v": 0
+  },
+  {
+    "_id": "66e8338963688a0c2ce78ff3",
+    "username": "ADMIN",
+    "email": "admin@gmail.com",
+    "password": "$2a$10$aQWeq/SFYESICZeZwEZxl.Rra5XaXMkB3kN6v8e26SMCwXD9n1TEK",
+    "profile": {
+      "phone": "",
+      "birthDate": null,
+      "hobby": "",
+      "address": "",
+      "image": ""
+    },
+    "score": 0,
+    "__v": 0
+  }
+]

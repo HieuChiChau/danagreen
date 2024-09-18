@@ -32,8 +32,8 @@ const SideBar = () => {
       <div className='logoDiv flex'>
         <img src={logo} alt='Image Name' />
         <h2>DANAGreen.</h2>
-        <a href='https://www.facebook.com/profile.php?id=61565393033018'><FaInstagram className='icon' /></a>
-        <a href=''><FaFacebook className='icon' /></a>
+        <a href='https://www.instagram.com/danagreen.ins/'><FaInstagram className='icon' /></a>
+        <a href='https://www.facebook.com/profile.php?id=61565393033018'><FaFacebook className='icon' /></a>
       </div>
 
       <div className='menuDiv'>

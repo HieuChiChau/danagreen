@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "66e835fe63688a0c2ce79010",
+    "code": "KFC24",
+    "description": "Giảm giá 20% cho đơn hàng trên 99k",
+    "pointsRequired": 30,
+    "expirationDate": "2024-12-31T00:00:00.000Z",
+    "isActive": true,
+    "brand": "KFC",
+    "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726494205/f5vzxqaayd4xxeufk0to.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "66e83c7763688a0c2ce79013",
+    "code": "KFC1001",
+    "description": "10% off on your next KFC order",
+    "pointsRequired": 30,
+    "expirationDate": "2024-12-31T23:59:59.000Z",
+    "isActive": true,
+    "brand": "KFC",
+    "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726495863/ndldfwqdx0wdktntmovc.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "66e83ccc63688a0c2ce79016",
+    "code": "GRAB1002",
+    "description": "Miễn phí chuyến dưới 1km",
+    "pointsRequired": 30,
+    "expirationDate": "2024-11-30T23:59:59.000Z",
+    "isActive": true,
+    "brand": "Grab",
+    "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726495947/gcrw3q0z7v6f6dfwss8s.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "66e83d7a63688a0c2ce79019",
+    "code": "STARBUCKS1003",
+    "description": "Giảm ngay 30.000đ",
+    "pointsRequired": 30,
+    "expirationDate": "2024-10-15T23:59:59.000Z",
+    "isActive": true,
+    "brand": "Starbucks",
+    "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726496122/u2ilssvg4txaukyvq88z.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "66e83e5563688a0c2ce7901c",
+    "code": "DOMINOS1004",
+    "description": "Mua 1 tặng 1 Pizza hải sản",
+    "pointsRequired": 30,
+    "expirationDate": "2025-01-01T23:59:59.000Z",
+    "isActive": true,
+    "brand": "Domino's Pizza",
+    "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726496341/gvwr0dfck1kpioecja6d.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "66e83f3063688a0c2ce7901f",
+    "code": "H&M1005",
+    "description": "Giảm 20% cho đơn hàng tiếp theo",
+    "pointsRequired": 30,
+    "expirationDate": "2024-12-31T23:59:59.000Z",
+    "isActive": true,
+    "brand": "H&M",
+    "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726496560/umwvz7rkhoi0on9yj5nu.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "66e8400e63688a0c2ce79022",
+    "code": "MCD1007",
+    "description": "Miễn phí nước uống cho hoá đơn trên 100k",
+    "pointsRequired": 30,
+    "expirationDate": "2024-09-30T23:59:59.000Z",
+    "isActive": true,
+    "brand": "McDonald's",
+    "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726496781/u4qwi2wl9jvv7arx2ssb.jpg",
+    "__v": 0
+  }
+]

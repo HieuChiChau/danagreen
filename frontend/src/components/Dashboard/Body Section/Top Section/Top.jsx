@@ -46,7 +46,7 @@ const Top = () => {
           <BiSearchAlt className='icon' />
         </div> */}
         <div className='adminDiv flex'>
-          <a href=''><FaInstagram className='icon' /></a>
+          <a href='https://www.instagram.com/danagreen.ins/'><FaInstagram className='icon' /></a>
           <a href='https://www.facebook.com/profile.php?id=61565393033018'><FaFacebook className='icon' /></a>
           <div className='adminImage'>
             <img src={img} alt='' onClick={() => navigate('/profile')} />

@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "66d62fd5425fec01f6019aba",
+    "userId": "66d62f86425fec01f6019a20",
+    "issue": "Không thể đăng nhập",
+    "details": "Lỗi",
+    "createdAt": "2024-09-02T21:36:21.887Z",
+    "__v": 0
+  },
+  {
+    "_id": "66d6305f425fec01f6019b56",
+    "userId": "66d63017425fec01f6019ae5",
+    "issue": "Lỗi hiển thị trên trang",
+    "details": "xấu",
+    "createdAt": "2024-09-02T21:38:39.153Z",
+    "__v": 0
+  }
+]

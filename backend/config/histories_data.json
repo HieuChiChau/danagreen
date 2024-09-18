@@ -1,0 +1,302 @@
+[
+  {
+    "_id": "66d62995425fec01f60196ed",
+    "userId": "66d62974425fec01f60196de",
+    "trash": {
+      "metal": 2,
+      "plastic": 2,
+      "paper": 0,
+      "date": "2024-09-02T21:09:41.364Z",
+      "randomNumber": 40940
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d629b7425fec01f601970f",
+    "userId": "66d62974425fec01f60196de",
+    "trash": {
+      "metal": 0,
+      "plastic": 1,
+      "paper": 1,
+      "date": "2024-09-02T21:10:15.116Z",
+      "randomNumber": 41005
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d629f8425fec01f601974a",
+    "userId": "66d62950425fec01f60196d8",
+    "trash": {
+      "metal": 3,
+      "plastic": 2,
+      "paper": 1,
+      "date": "2024-09-02T21:11:20.100Z",
+      "randomNumber": 41117
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62a32425fec01f601978b",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 2,
+      "plastic": 0,
+      "paper": 2,
+      "date": "2024-09-02T21:12:18.352Z",
+      "randomNumber": 41215
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62a44425fec01f60197ad",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 0,
+      "plastic": 1,
+      "paper": 0,
+      "date": "2024-09-02T21:12:36.143Z",
+      "randomNumber": 41235
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62a7e425fec01f60197dc",
+    "userId": "66d6293e425fec01f60196d5",
+    "trash": {
+      "metal": 3,
+      "plastic": 4,
+      "paper": 0,
+      "date": "2024-09-02T21:13:34.940Z",
+      "randomNumber": 41330
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62ab8425fec01f601981d",
+    "userId": "66d6292f425fec01f60196d2",
+    "trash": {
+      "metal": 1,
+      "plastic": 5,
+      "paper": 1,
+      "date": "2024-09-02T21:14:32.356Z",
+      "randomNumber": 41430
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62ad1425fec01f6019851",
+    "userId": "66d6292f425fec01f60196d2",
+    "trash": {
+      "metal": 0,
+      "plastic": 1,
+      "paper": 1,
+      "date": "2024-09-02T21:14:57.866Z",
+      "randomNumber": 41455
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62af1425fec01f6019869",
+    "userId": "66d6292f425fec01f60196d2",
+    "trash": {
+      "metal": 0,
+      "plastic": 0,
+      "paper": 1,
+      "date": "2024-09-02T21:15:29.134Z",
+      "randomNumber": 41527
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62f3b425fec01f60199e7",
+    "userId": "66d6292f425fec01f60196d2",
+    "trash": {
+      "metal": 2,
+      "plastic": 2,
+      "paper": 1,
+      "date": "2024-09-02T21:33:47.981Z",
+      "randomNumber": 42214
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d62fa5425fec01f6019a62",
+    "userId": "66d62f86425fec01f6019a20",
+    "trash": {
+      "metal": 1,
+      "plastic": 3,
+      "paper": 0,
+      "date": "2024-09-02T21:35:33.258Z",
+      "randomNumber": 43428
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d63036425fec01f6019b17",
+    "userId": "66d63017425fec01f6019ae5",
+    "trash": {
+      "metal": 1,
+      "plastic": 3,
+      "paper": 0,
+      "date": "2024-09-02T21:37:58.657Z",
+      "randomNumber": 43428
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d63091425fec01f6019b7b",
+    "userId": "66d6293e425fec01f60196d5",
+    "trash": {
+      "metal": 1,
+      "plastic": 3,
+      "paper": 0,
+      "date": "2024-09-02T21:39:29.903Z",
+      "randomNumber": 43428
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d630d3425fec01f6019bc2",
+    "userId": "66d6293e425fec01f60196d5",
+    "trash": {
+      "metal": 2,
+      "plastic": 3,
+      "paper": 0,
+      "date": "2024-09-02T21:40:35.657Z",
+      "randomNumber": 44028
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6c5389d515df6182ea97f",
+    "userId": "66d6292f425fec01f60196d2",
+    "trash": {
+      "metal": 2,
+      "plastic": 3,
+      "paper": 9,
+      "date": "2024-09-03T08:13:44.982Z",
+      "randomNumber": 151328
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6c7a99d515df6182ea9ab",
+    "userId": "66d6293e425fec01f60196d5",
+    "trash": {
+      "metal": 2,
+      "plastic": 3,
+      "paper": 9,
+      "date": "2024-09-03T08:24:09.078Z",
+      "randomNumber": 151328
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6c7f19d515df6182eaa06",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 2,
+      "plastic": 3,
+      "paper": 9,
+      "date": "2024-09-03T08:25:21.502Z",
+      "randomNumber": 151328
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6cbd39d515df6182eaa1a",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 8,
+      "plastic": 3,
+      "paper": 28,
+      "date": "2024-09-03T08:41:55.503Z",
+      "randomNumber": 154122
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6cc5e9d515df6182eaa58",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 0,
+      "plastic": 0,
+      "paper": 1,
+      "date": "2024-09-03T08:44:14.037Z",
+      "randomNumber": 154342
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6cd869d515df6182eaa75",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 1,
+      "plastic": 0,
+      "paper": 4,
+      "date": "2024-09-03T08:49:10.130Z",
+      "randomNumber": 154707
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6ce389d515df6182eaa89",
+    "userId": "66d62974425fec01f60196de",
+    "trash": {
+      "metal": 0,
+      "plastic": 0,
+      "paper": 4,
+      "date": "2024-09-03T08:52:08.851Z",
+      "randomNumber": 155152
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6ce669d515df6182eaab1",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 1,
+      "plastic": 0,
+      "paper": 5,
+      "date": "2024-09-03T08:52:54.511Z",
+      "randomNumber": 155247
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6ce9c9d515df6182eaae3",
+    "userId": "66d6295f425fec01f60196db",
+    "trash": {
+      "metal": 1,
+      "plastic": 0,
+      "paper": 0,
+      "date": "2024-09-03T08:53:48.537Z",
+      "randomNumber": 155304
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6cfb69d515df6182eab0b",
+    "userId": "66d6292f425fec01f60196d2",
+    "trash": {
+      "metal": 4,
+      "plastic": 2,
+      "paper": 14,
+      "date": "2024-09-03T08:58:30.450Z",
+      "randomNumber": 155812
+    },
+    "__v": 0
+  },
+  {
+    "_id": "66d6cfb89d515df6182eab13",
+    "userId": "66d6292f425fec01f60196d2",
+    "trash": {
+      "metal": 4,
+      "plastic": 3,
+      "paper": 14,
+      "date": "2024-09-03T08:58:32.396Z",
+      "randomNumber": 155830
+    },
+    "__v": 0
+  }
+]
