@@ -1,15 +1,28 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
+import path from 'path';
+import dotenv from 'dotenv';
+
+// Đọc biến môi trường từ file .env
+dotenv.config();
+
+const certPath = process.env.VITE_CERT_LINK;
+const keyPath = process.env.VITE_KEY_LINK;
+
+// Kiểm tra xem các biến môi trường có được định nghĩa không
+if (!certPath || !keyPath) {
+  throw new Error('CERT_LINK hoặc KEY_LINK không được định nghĩa trong biến môi trường.');
+}
 
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '192.168.5.2',
+    host: process.env.VITE_IP || 'localhost',
     port: 5173,
     https: {
-      key: fs.readFileSync('E:/InTE/danagreen/backend/key.pem'),
-      cert: fs.readFileSync('E:/InTE/danagreen/backend/cert.pem')
+      key: fs.readFileSync(path.resolve(keyPath)),
+      cert: fs.readFileSync(path.resolve(certPath))
     }
-  },
+  }
 });

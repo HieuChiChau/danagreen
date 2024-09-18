@@ -3,14 +3,16 @@ import axios from 'axios';
 class SupportAPI {
     static async reportIssue(token, issue, details) {
         try {
-            const response = await axios.post('https://192.168.5.2:3000/api/support',
+            const response = await axios.post(
+                `${import.meta.env.VITE_API_URL}/api/support`,
                 { issue, details },
                 {
                     headers: {
-                        'authorization': `Bearer ${token}`,
+                        'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'
                     }
-                });
+                }
+            );
             return response.data;
         } catch (error) {
             if (error.response) {
