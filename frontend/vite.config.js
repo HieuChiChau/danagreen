@@ -41,8 +41,8 @@ dotenv.config();
 // Cấu hình cho môi trường phát triển
 export default defineConfig({
   plugins: [react()],
-  server: {
-    host: process.env.VITE_IP || 'localhost',
-    port: 5173,
-  }
+  // server: {
+  //   host: process.env.VITE_IP || 'localhost',
+  //   port: 5173,
+  // }
 });
