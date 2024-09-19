@@ -1,53 +1,47 @@
-const path = require('path')
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const fs = require('fs')
-const https = require('https')
+const fs = require('fs');
+const https = require('https');
+require('dotenv').config();
 
-require('dotenv').config()
+const app = express();
+const port = process.env.PORT || 3000;
 
-const app = express()
-const port = process.env.PORT || 3000
-const host = process.env.IP
-
-const authRoutes = require('./routes/authRoutes')
-const userRoutes = require('./routes/userRoutes')
-const supportRoutes = require('./routes/supportRoutes')
-const historyRoutes = require('./routes/historyRoutes')
-const voucherRoutes = require('./routes/voucherRoutes')
-const eventRoutes = require('./routes/eventRoutes')
-const connectDB = require('./config/db')
+// Routes
+const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
+const supportRoutes = require('./routes/supportRoutes');
+const historyRoutes = require('./routes/historyRoutes');
+const voucherRoutes = require('./routes/voucherRoutes');
+const eventRoutes = require('./routes/eventRoutes');
+const connectDB = require('./config/db');
 const imageRoutes = require('./routes/imageRoutes');
-const eventParticipantRoutes = require('./routes/eventParticipantRoutes')
-connectDB.connect()
+const eventParticipantRoutes = require('./routes/eventParticipantRoutes');
 
-app.use(cors({
-    origin: `https://${host}:5173`, // Địa chỉ của ứng dụng React
+connectDB.connect();
+app.use(cors())
 
-}));
+// Middleware
+app.use(express.json());
+app.use(morgan('dev'));
 
-//MiddleWare
-app.use(express.json())
-app.use(morgan('dev'))
-
-app.use('/api/auth', authRoutes)
-app.use('/api/user', userRoutes)
-app.use('/api', supportRoutes)
-app.use('/api/history', historyRoutes)
-app.use('/api/voucher', voucherRoutes)
-app.use('/api/event', eventRoutes)
+// Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api', supportRoutes);
+app.use('/api/history', historyRoutes);
+app.use('/api/voucher', voucherRoutes);
+app.use('/api/event', eventRoutes);
 app.use('/api/images', imageRoutes);
 app.use('/api/participant', eventParticipantRoutes);
-// app.listen(port, host, () => {
-//     console.log(`App listening at http://${host}:${port}`);
-// });
 
-const httpsServer = https.createServer({
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('cert.pem')
-}, app);
+app.get('/', (req, res) => {
+    res.send('API Working')
+})
 
-httpsServer.listen(port, () => {
-    console.log(`Server đang chạy ở https://${host}:${port}`);
+// Listen on HTTP (Render handles HTTPS)
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
