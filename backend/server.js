@@ -21,10 +21,7 @@ const imageRoutes = require('./routes/imageRoutes');
 const eventParticipantRoutes = require('./routes/eventParticipantRoutes');
 
 connectDB.connect();
-
-app.use(cors({
-    origin: process.env.FRONTEND_URL || '*', // Thay thế bằng URL của ứng dụng React
-}));
+app.use(cors())
 
 // Middleware
 app.use(express.json());
@@ -39,6 +36,10 @@ app.use('/api/voucher', voucherRoutes);
 app.use('/api/event', eventRoutes);
 app.use('/api/images', imageRoutes);
 app.use('/api/participant', eventParticipantRoutes);
+
+app.get('/', (req, res) => {
+    res.send('API Working')
+})
 
 // Listen on HTTP (Render handles HTTPS)
 app.listen(port, () => {
