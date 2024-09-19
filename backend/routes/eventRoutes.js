@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const EventController = require('../controllers/EventController');
-
+const auth = require('../middleware/auth');
 // Cấu hình multer để lưu trữ tệp tạm thời
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -26,5 +26,5 @@ router.put('/events/:id', upload.single('image'), EventController.updateEvent);
 router.get('/events', EventController.getAllEvents);
 router.get('/events/:id', EventController.getEventById);
 router.delete('/events/:id', EventController.deleteEvent);
-
+router.get('/counts', auth, EventController.getEventCount);
 module.exports = router;

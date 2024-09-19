@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Top.css'
 import { useNavigate } from 'react-router-dom';
 import User from '../../../../api/user'
+import Event from '../../../../api/event'
 //Import Icons ===>
 import { BiSearchAlt } from 'react-icons/bi'
 import { TbMessageCircle } from 'react-icons/tb'
@@ -17,20 +18,32 @@ import img_trs from '../../../../assets/bin-transparent.png'
 
 const Top = () => {
   const [username, setUsername] = useState('');
+  const [eventCounts, setEventCounts] = useState({ today: 0, month: 0 });
   const navigate = useNavigate()
 
   useEffect(() => {
-    const fetchProfile = async () => {
+    const fetchProfileAndEvents = async () => {
       const token = localStorage.getItem('authToken');
-      console.log('>>>> Check token: ' + token);
+      if (!token) return;
+
       try {
+        // Fetch user profile
         const data = await User.getProfile(token);
         setUsername(data.username);
+
+        // Fetch event counts
+        const counts = await Event.getEventCount(token);
+        setEventCounts({
+          today: counts.todayEventsCount,
+          month: counts.monthEventsCount
+        });
       } catch (error) {
-        console.error('Error fetching profile:', error);
+        console.error('Error fetching data:', error);
+        // Optionally handle error (e.g., display an alert or redirect)
       }
     };
-    fetchProfile();
+
+    fetchProfileAndEvents();
   }, []);
 
   return (
@@ -77,16 +90,15 @@ const Top = () => {
 
               <div className='flex'>
                 <span>
-                  Hôm nay <br /> <small>2 sự kiện</small>
+                  Hôm nay <br /> <small>{eventCounts.today} sự kiện</small>
                 </span>
                 <span>
-                  Tháng này <br /> <small>20 sự kiện</small>
+                  Tháng này <br /> <small>{eventCounts.month} sự kiện</small>
                 </span>
               </div>
               <span className='flex link'>
                 Xem tất cả <BsArrowRightShort className='icon' />
               </span>
-
             </div>
 
             <div className='imgDiv'>
