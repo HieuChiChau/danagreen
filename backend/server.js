@@ -22,6 +22,9 @@ const eventParticipantRoutes = require('./routes/eventParticipantRoutes');
 
 connectDB.connect();
 
+app.use(cors({
+    origin: process.env.FRONTEND_URL || '*', // Thay thế bằng URL của ứng dụng React
+}));
 
 // Middleware
 app.use(express.json());
