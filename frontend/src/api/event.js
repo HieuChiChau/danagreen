@@ -43,6 +43,20 @@ class EventAPI {
             throw error;
         }
     }
+    static async getEventCount(token) {
+        try {
+            const response = await axios.get(
+                `${import.meta.env.VITE_API_URL}/api/event/counts`,
+                {
+                    headers: { Authorization: `Bearer ${token}` }
+                }
+            );
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching event counts:', error);
+            throw error;
+        }
+    }
 }
 
 export default EventAPI;
