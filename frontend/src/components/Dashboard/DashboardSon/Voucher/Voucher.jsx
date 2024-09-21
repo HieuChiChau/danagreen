@@ -80,7 +80,7 @@ const Voucher = () => {
                     <option value="H&M">H&M</option>
                     <option value="Domino's Pizza">Domino's Pizza</option>
                     <option value="McDonald's">McDonald's</option>
-                    <option value="NET ENGLISH">NET ENGLISH</option>
+                    <option value="NET English">NET English</option>
                 </select>
             </div>
             {loading && (
