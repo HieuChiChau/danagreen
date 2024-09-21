@@ -1,0 +1,108 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.user-list h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: normal;
+}
+
+tbody td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody td {
+    color: #000;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .user-list {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    thead th {
+        padding: 8px;
+        font-size: 14px; /* Thu nhỏ font ở tiêu đề */
+    }
+
+    tbody td {
+        padding: 8px;
+        font-size: 13px; /* Thu nhỏ font ở nội dung */
+    }
+
+    table {
+        max-width: 100%; /* Đảm bảo bảng không vượt quá màn hình */
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-list h2 {
+        font-size: 20px;
+    }
+
+    thead th {
+        padding: 6px;
+        font-size: 12px; /* Thu nhỏ hơn khi màn hình nhỏ hơn */
+    }
+
+    tbody td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    table {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+}

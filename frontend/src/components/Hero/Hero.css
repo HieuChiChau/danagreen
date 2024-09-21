@@ -1,4 +1,4 @@
-:root{
+:root {
     --PrimaryColor: hsl(94, 59%, 35%);
     --HoverColor: #bdf094;
     --paleGreen: hsl(96, 75%, 89%);
@@ -9,7 +9,6 @@
     --greyText: rgb(190, 190, 190);
     --inputColor: hsl(330, 12%, 97%);
 
-
     --biggestFontSize: 2.5rem;
     --h1FontSize: 1.5rem;
     --h2FontSize: 1.25rem;
@@ -18,11 +17,18 @@
     --smallFontSize: .813rem;
     --smallestFontSize: .75rem;
 }
-.hero{
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ngăn chặn việc trượt ngang */
+}
+
+.hero {
     width: 100%;
-    min-width: 100vh;
     min-height: 150vh;
-    background: linear-gradient(rgba(2, 84, 95, 0.474), rgba(11, 142, 109, 0.419)), url('../../assets/about.png');
+    background: linear-gradient(rgba(2, 84, 95, 0.474), rgba(11, 142, 109, 0.419)), 
+        url('../../assets/about.png');
     background-size: cover;
     background-position: center;
     color: var(--whiteColor);
@@ -31,55 +37,60 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     box-sizing: border-box;
 }
-.hero-text{
+
+.hero-text {
     text-align: center;
     max-width: 800px;
+    padding: 0 20px; /* Thêm padding để tránh nội dung tràn */
 }
-.hero-text h1{
+
+.hero-text h1 {
     font-size: 60px;
     font-weight: 600;
 }
-.hero-text p{
-    font-weight: 700px;
+
+.hero-text p {
+    font-weight: 700;
     margin: 10px auto 20px;
     line-height: 1.4;
 }
 
 /* --------- media query --------- */
 
-@media (max-width: 850px){
-    .hero-text h1{
+@media (max-width: 850px) {
+    .hero-text h1 {
         font-size: 40px;
     }
 }
-@media (max-width: 650px){
-    .hero-text h1{
+
+@media (max-width: 650px) {
+    .hero-text h1 {
         font-size: 30px;
         max-width: 400px;
         margin: auto;
     }
-    .hero-text p{
+    .hero-text p {
         font-size: 14px;
         margin: 15px auto 30px;
     }
 }
-@media (max-width: 450px){
+
+@media (max-width: 450px) {
     .hero {
-        background-size: 100% auto; /* Giữ nền trong bề ngang của màn hình */
-        background-position: center; /* Căn giữa hình nền */
+        background-size: 100% auto; /* Giữ hình nền trong bề ngang màn hình */
+        background-position: center center;
         min-height: 70vh;
+        overflow-x: hidden; /* Đảm bảo không bị trượt ngang */
     }
-    .hero-text h1{
+    .hero-text h1 {
         font-size: 23px;
         max-width: 270px;
         margin: auto;
     }
-    .hero-text p{
+    .hero-text p {
         font-size: 10px;
         margin: 13px auto 27px;
     }
-    
 }

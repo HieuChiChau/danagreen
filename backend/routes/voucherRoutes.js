@@ -20,6 +20,6 @@ const upload = multer({ storage: storage });
 router.get('/list', VoucherController.getVouchers)
 router.post('/redeem', auth, VoucherController.redeemVoucher)
 router.get('/my-vouchers', auth, VoucherController.getMyVouchers)
-router.post('/add-voucher', auth, upload.single('image'), VoucherController.addVoucher)
+router.post('/add-voucher', upload.single('image'), VoucherController.addVoucher)
 
 module.exports = router

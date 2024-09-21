@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const EventController = require('../controllers/EventController');
+const auth = require('../middleware/auth')
 
 // Cấu hình multer để lưu trữ tệp tạm thời
 const storage = multer.diskStorage({

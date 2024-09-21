@@ -113,6 +113,22 @@ class UserController {
             res.status(500).json({ message: error.message });
         }
     }
+    async listUsers(req, res) {
+        try {
+            const users = await User.find({})
+
+            const userInfos = users.map(user => ({
+                username: user.username,
+                email: user.email,
+                score: user.score,
+                createdAt: user._id.getTimestamp(),
+            }));
+
+            res.json(userInfos);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    }
 
 }
 
