@@ -35,11 +35,11 @@ const Testimonials = () => {
               <div className='user-info'>
                 <img src={user_1} alt='User 1' />
                 <div>
-                  <h3>Nguyễn Văn Một</h3>
+                  <h3>Phan Thanh Bình</h3>
                   <span>Đà Nẵng</span>
                 </div>
               </div>
-              <p>Thùng rác tôi thấy rất là thông minh, đặc biệt là tích điểm, tôi thích nó vcl, tôi đã vứt nhiều rác và đổi được rất nhiều phần thưởng</p>
+              <p>Thùng rác thông minh thực sự rất tiện lợi! Nó giúp tôi phân loại rác dễ dàng mà không phải mất công suy nghĩ nhiều. Tôi còn được tích điểm thưởng mỗi khi bỏ rác đúng cách, điều này thực sự khuyến khích tôi tái chế nhiều hơn.</p>
             </div>
           </li>
           {/* <li>
