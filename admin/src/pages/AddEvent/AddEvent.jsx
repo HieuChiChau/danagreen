@@ -80,7 +80,7 @@ const AddEvent = () => {
                         type='file'
                         id='image'
                         hidden
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-name flex-col'>
@@ -91,7 +91,7 @@ const AddEvent = () => {
                         type='text'
                         name='title'
                         placeholder='Tiêu đề sự kiện'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-name flex-col'>
@@ -102,7 +102,7 @@ const AddEvent = () => {
                         type='text'
                         name='introduce'
                         placeholder='Giới thiệu sự kiện'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-name flex-col'>
@@ -112,7 +112,7 @@ const AddEvent = () => {
                         value={data.startTime}
                         type='datetime-local'
                         name='startTime'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-name flex-col'>
@@ -122,7 +122,7 @@ const AddEvent = () => {
                         value={data.endTime}
                         type='datetime-local'
                         name='endTime'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-name flex-col'>
@@ -133,7 +133,7 @@ const AddEvent = () => {
                         type='text'
                         name='location'
                         placeholder='Địa điểm diễn ra sự kiện'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-description flex-col'>
@@ -144,7 +144,7 @@ const AddEvent = () => {
                         name='description'
                         rows='6'
                         placeholder='Mô tả sự kiện'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-description flex-col'>
@@ -155,7 +155,7 @@ const AddEvent = () => {
                         name='rules'
                         rows='3'
                         placeholder='Thể lệ sự kiện'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-description flex-col'>
@@ -166,7 +166,7 @@ const AddEvent = () => {
                         name='requirements'
                         rows='3'
                         placeholder='Yêu cầu sự kiện'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-description flex-col'>
@@ -177,7 +177,7 @@ const AddEvent = () => {
                         name='howToScore'
                         rows='5'
                         placeholder='Cách thức tính giải'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-description flex-col'>
@@ -188,7 +188,7 @@ const AddEvent = () => {
                         name='awards'
                         rows='4'
                         placeholder='Giải thưởng'
-                        required
+                        
                     />
                 </div>
                 <div className='add-product-description flex-col'>
