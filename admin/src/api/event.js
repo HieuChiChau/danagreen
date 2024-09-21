@@ -5,7 +5,7 @@ class EventAPI {
         try {
             // Sử dụng import.meta.env để truy cập biến môi trường
             const response = await axios.post(
-                'http://localhost:3000/api/event/events',
+                `${import.meta.env.VITE_API_URL}/api/event/events`,
                 eventData,
                 {
                     headers: {

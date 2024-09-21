@@ -4,7 +4,7 @@ class VoucherAPI {
     static async addVoucher(voucherData) {
         try {
             const response = await axios.post(
-                'http://localhost:3000/api/voucher/add-voucher', // Đường dẫn sửa lại
+                `${import.meta.env.VITE_API_URL}/api/voucher/add-voucher`,// Đường dẫn sửa lại
                 voucherData,
                 {
                     headers: {
