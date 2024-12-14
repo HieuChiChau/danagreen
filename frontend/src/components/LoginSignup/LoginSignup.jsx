@@ -48,6 +48,12 @@ const LoginSignup = () => {
         try {
             const data = await AuthAPI.register(username, email, password);
             console.log('Register Successful: ', data);
+            
+            if (data.message === 'Đăng ký thành công') {
+                alert(data.message);
+            }
+
+            // Chuyển sang trang đăng nhập
             setAction('Login');
             // Xóa lỗi sau khi đăng ký thành công
             setEmailError('');

@@ -36,7 +36,10 @@ class AuthController {
             }
             jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' }, (error, token) => {
                 if (error) throw error
-                res.json({ token })
+                res.json({ 
+                    message: 'Đăng ký thành công',
+                    token 
+                })
             })
         } catch (error) {
             res.status(500).json({ message: 'Lỗi máy chủ' })
