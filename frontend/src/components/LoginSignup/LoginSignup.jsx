@@ -31,6 +31,11 @@ const LoginSignup = () => {
             // Chúng ta sẽ parse hoặc dựa vào error.response.data để lấy thông tin.
             if (error.response && error.response.data && error.response.data.message) {
                 const errMsg = error.response.data.message;
+                
+                if (errMsg === 'Sai mật khẩu') {
+                    alert('Sai mật khẩu');
+                }
+
                 if (errMsg.includes('Email')) {
                     setEmailError(errMsg);
                 } else if (errMsg.includes('Mật khẩu') || errMsg.includes('password')) {

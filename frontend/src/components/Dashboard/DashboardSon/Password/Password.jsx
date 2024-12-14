@@ -16,6 +16,17 @@ const Password = () => {
   const handleUpdatePassword = async (e) => {
     e.preventDefault();
 
+    // 3 điều kiện kiểm tra trên UI
+    if (!currentPassword.trim()) {
+      setError('Mật khẩu cũ không được bỏ trống');
+      return;
+    }
+
+    if (newPassword.length <= 6) {
+      setError('Mật khẩu mới phải dài hơn 6 ký tự');
+      return;
+    }
+
     if (newPassword !== confirmPassword) {
       setError('Xác nhận mật khẩu không hợp lệ');
       return;
@@ -28,7 +39,12 @@ const Password = () => {
       navigate('/dashboard');
     } catch (error) {
       console.error('Error updating password:', error);
-      setError('Đổi mật khẩu thất bại. Vui lòng thử lại.');
+      // 3 điều kiện trong try (từ phía server) nếu có message trả về thì alert
+      if (error.response && error.response.data && error.response.data.message) {
+        alert(error.response.data.message);
+      } else {
+        alert('Có lỗi xảy ra! Vui lòng thử lại.');
+      }
     }
   };
 
@@ -41,15 +57,15 @@ const Password = () => {
           <i className="material-symbols-rounded">call</i>
         </div>
         <div className='input-pass'>
-          <input type='password' value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} placeholder='Mật khẩu hiện tại' />
+          <input type='password' value={currentPassword} onChange={(e) => {setCurrentPassword(e.target.value); setError('');}} placeholder='Mật khẩu hiện tại' />
           <i className="material-symbols-rounded">Passkey</i>
         </div>
         <div className='input-pass'>
-          <input type='password' value={newPassword} onChange={(e) => setNewPassword(e.target.value)} placeholder='Mật khẩu mới' />
+          <input type='password' value={newPassword} onChange={(e) => {setNewPassword(e.target.value); setError('');}} placeholder='Mật khẩu mới' />
           <i className="material-symbols-rounded">Lock</i>
         </div>
         <div className='input-pass'>
-          <input type='password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='Nhập lại mật khẩu' />
+          <input type='password' value={confirmPassword} onChange={(e) => {setConfirmPassword(e.target.value); setError('');}} placeholder='Nhập lại mật khẩu' />
           <i className="material-symbols-rounded">Lock_Clock</i>
         </div>
         {error && <p className='error-message'>{error}</p>}

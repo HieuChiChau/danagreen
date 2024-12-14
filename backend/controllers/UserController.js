@@ -50,44 +50,55 @@ class UserController {
 
     async updatePassword(req, res) {
         const { oldPassword, newPassword } = req.body;
-
+    
+        // Kiểm tra mật khẩu cũ và mật khẩu mới
+        if (!oldPassword || oldPassword.trim().length === 0) {
+            return res.status(400).json({ message: 'Mật khẩu cũ không được bỏ trống' });
+        }
+    
+        if (!newPassword || newPassword.trim().length === 0) {
+            return res.status(400).json({ message: 'Mật khẩu mới không được bỏ trống' });
+        }
+    
+        if (newPassword.length <= 6) {
+            return res.status(400).json({ message: 'Mật khẩu mới phải dài hơn 6 ký tự' });
+        }
+    
         try {
             const user = await User.findById(req.user._id);
             if (!user) {
                 return res.status(404).json({ message: 'Không tìm thấy người dùng!' });
             }
-
+    
             // Kiểm tra mật khẩu cũ
             const isMatch = await user.matchPassword(oldPassword);
             if (!isMatch) {
                 return res.status(400).json({ message: 'Sai mật khẩu cũ!' });
             }
-
+    
             // Kiểm tra mật khẩu mới có khác mật khẩu cũ không
             if (await user.matchPassword(newPassword)) {
                 return res.status(400).json({ message: 'Mật khẩu mới không được giống mật khẩu cũ!' });
             }
-
-            console.log('Mật khẩu cũ (trước khi mã hóa):', oldPassword);
-            console.log('Mật khẩu mới (trước khi mã hóa):', newPassword);
-
+    
             user.password = newPassword;
             await user.save();
-
-            // Xác minh mật khẩu mới có được lưu đúng cách không
+    
+            // Xác minh mật khẩu mới
             const updatedUser = await User.findById(req.user._id);
             const isPasswordUpdated = await updatedUser.matchPassword(newPassword);
-
+    
             if (!isPasswordUpdated) {
                 return res.status(500).json({ message: 'Lỗi khi lưu mật khẩu mới!' });
             }
-
-            res.status(200).json({ message: 'Đổi mật khẩu thành công' });
+    
+            return res.status(200).json({ message: 'Đổi mật khẩu thành công' });
         } catch (error) {
             console.error('Error updating password:', error);
-            res.status(500).json({ message: 'Đổi mật khẩu thất bại!', error: error.message });
+            return res.status(500).json({ message: 'Đổi mật khẩu thất bại!', error: error.message });
         }
     }
+    
 
     async getRanking(req, res) {
         try {
