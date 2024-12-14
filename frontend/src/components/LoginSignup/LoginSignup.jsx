@@ -15,27 +15,59 @@ const LoginSignup = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+
     const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
             const data = await AuthAPI.login(email, password);
             console.log('Login Successful: ', data);
-            navigate('/dashboard'); // Navigate to dashboard on successful login
+            navigate('/dashboard'); 
         } catch (error) {
             console.error('Login error:', error);
+            // Giả sử lỗi trả về dạng { message: "Sai Mật Khẩu" hoặc "Email không hợp lệ" }
+            // Chúng ta sẽ parse hoặc dựa vào error.response.data để lấy thông tin.
+            if (error.response && error.response.data && error.response.data.message) {
+                const errMsg = error.response.data.message;
+                if (errMsg.includes('Email')) {
+                    setEmailError(errMsg);
+                } else if (errMsg.includes('Mật khẩu') || errMsg.includes('password')) {
+                    setPasswordError(errMsg);
+                } else {
+                    // Trường hợp lỗi chung
+                    setEmailError('');
+                    setPasswordError('');
+                }
+            }
         }
     }
-
+    
     const handleRegister = async () => {
         try {
             const data = await AuthAPI.register(username, email, password);
             console.log('Register Successful: ', data);
-            setAction('Login'); // Switch to login view after successful registration
+            setAction('Login');
+            // Xóa lỗi sau khi đăng ký thành công
+            setEmailError('');
+            setPasswordError('');
         } catch (error) {
             console.error('Register error:', error);
+            if (error.response && error.response.data && error.response.data.message) {
+                const errMsg = error.response.data.message;
+                if (errMsg.includes('Email')) {
+                    setEmailError(errMsg);
+                } else if (errMsg.includes('Mật khẩu') || errMsg.includes('password')) {
+                    setPasswordError(errMsg);
+                } else {
+                    setEmailError('');
+                    setPasswordError('');
+                }
+            }
         }
     }
+    
 
     return (
         <div className='loginsignup'>
@@ -71,9 +103,10 @@ const LoginSignup = () => {
                         type='email'
                         placeholder='Email'
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => { setEmail(e.target.value); setEmailError(''); }}
                         required
                     />
+                    {emailError && <div className="error-message">{emailError}</div>}
                 </div>
                 <div className='input'>
                     <img src={password_icon} alt='' className='siuuuu' />
@@ -81,11 +114,13 @@ const LoginSignup = () => {
                         type='password'
                         placeholder='Password'
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e) => { setPassword(e.target.value); setPasswordError(''); }}
                         required
                     />
+                    {passwordError && <div className="error-message">{passwordError}</div>}
                 </div>
             </div>
+
             {action === 'Sign up' ? <div></div> : <div className='forgot-password'>Quên mật khẩu? <span>Nhấn tại đây!</span></div>}
 
             <div className='submit-container'>

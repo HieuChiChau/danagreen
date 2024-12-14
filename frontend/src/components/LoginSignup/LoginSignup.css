@@ -140,6 +140,13 @@
     color: #676767;
 }
 
+.error-message {
+    color: red;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
 
 @media (max-width: 450px) {
     .loginsignup {
@@ -206,6 +213,7 @@
         width: 120px;
         border-radius: 40px;
     }
+
 }
 
 
