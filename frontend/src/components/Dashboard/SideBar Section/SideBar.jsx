@@ -81,7 +81,7 @@ const SideBar = () => {
             <a className='menuLink flex'>
               <GoGift className='icon' />
               <span className='smallText'>
-                Voucher
+                Đổi quà
               </span>
             </a>
           </li>

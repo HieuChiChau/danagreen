@@ -52,7 +52,7 @@ class HistoryController {
 
             let totalScore = 0;
             histories.forEach(history => {
-                totalScore += (history.trash.metal * 7) + (history.trash.plastic * 4) + (history.trash.paper * 1);
+                totalScore += (history.trash.metal * 10) + (history.trash.plastic * 5) + (history.trash.paper * 30);
             });
             console.log('Tổng điểm:', totalScore);
 

@@ -33,7 +33,7 @@ const Activity = () => {
 
   const calculateScore = (activity) => {
     if (!activity) return 0;
-    return (activity.metal * 7) + (activity.plastic * 4) + (activity.paper * 1);
+    return (activity.metal * 10) + (activity.plastic * 5) + (activity.paper * 30);
   };
 
   const timeAgo = (date) => {

@@ -69,7 +69,7 @@ const Listing = () => {
 
         const totalPoints = recentTrashData.reduce((total, item) => {
           const { metal, plastic, paper } = item.trash;
-          return total + (metal * 7) + (plastic * 4) + (paper * 1);
+          return total + (metal * 10) + (plastic * 5) + (paper * 30);
         }, 0);
 
         setTotalPoints(totalPoints);

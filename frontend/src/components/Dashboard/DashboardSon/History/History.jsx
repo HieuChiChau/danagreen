@@ -24,7 +24,7 @@ const History = () => {
         const data = await HistoryAPI.getHistory(token);
 
         const updatedData = data.map(item => {
-          const score = (item.trash.metal * 7) + (item.trash.plastic * 4) + (item.trash.paper * 1);
+          const score = (item.trash.metal * 10) + (item.trash.plastic * 5) + (item.trash.paper * 30);
           return { ...item, trash: { ...item.trash, score } };
         });
 

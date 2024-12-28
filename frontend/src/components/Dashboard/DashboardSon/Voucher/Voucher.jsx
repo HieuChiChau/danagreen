@@ -58,7 +58,7 @@ const Voucher = () => {
         <div className="voucher-list-container">
             <div className="voucher-header">
                 <button className="my-voucher-button" onClick={() => navigate('/myvoucher')}>
-                    Voucher của tôi
+                    Quà tặng của tôi
                 </button>
                 <h2 className="voucher-list-title">Danh Sách Voucher</h2>
             </div>

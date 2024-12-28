@@ -31,17 +31,17 @@ const MyVoucher = () => {
 
     return (
         <div className="voucher-list-container">
-            <h2 className="voucher-list-title">Voucher của tôi</h2>
+            <h2 className="voucher-list-title">Quà tặng của tôi</h2>
             {loading ? (
                 <div className="loading">
-                    <p>Đang tải voucher, vui lòng đợi...</p>
+                    <p>Đang tải mã, vui lòng đợi...</p>
                 </div>
             ) : error ? (
                 <p className="error-message">{error}</p>
             ) : (
                 <div className="voucher-list">
                     {vouchers.length === 0 ? (
-                        <p>Không có voucher nào.</p>
+                        <p>Không có quà tặng nào.</p>
                     ) : (
                         vouchers.map((voucher) => (
                             <div key={voucher._id} className="voucher-card">

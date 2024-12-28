@@ -6,7 +6,7 @@
     "pointsRequired": 30,
     "expirationDate": "2024-12-31T00:00:00.000Z",
     "isActive": true,
-    "brand": "KFC",
+    "brand": "NestLé",
     "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726494205/f5vzxqaayd4xxeufk0to.jpg",
     "__v": 0
   },
@@ -17,7 +17,7 @@
     "pointsRequired": 30,
     "expirationDate": "2024-12-31T23:59:59.000Z",
     "isActive": true,
-    "brand": "KFC",
+    "brand": "NestLé",
     "imageUrl": "https://res.cloudinary.com/djpgywowp/image/upload/v1726495863/ndldfwqdx0wdktntmovc.jpg",
     "__v": 0
   },
