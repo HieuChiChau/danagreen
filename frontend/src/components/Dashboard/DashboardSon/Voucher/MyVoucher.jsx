@@ -50,7 +50,7 @@ const MyVoucher = () => {
                                 <div className="voucher-info">
                                     <h3 className="voucher-title">{voucher.code}</h3>
                                     <p className="voucher-description">{voucher.description}</p>
-                                    <p className="voucher-expiry-date">HSD: {new Date(voucher.expirationDate).toLocaleDateString()}</p>
+                                    <p className="voucher-expiry-date">Liên hệ: {voucher.expirationDate}</p>
                                 </div>
                             </div>
                         ))

@@ -2,7 +2,7 @@
   {
     "_id": "66e835fe63688a0c2ce79010",
     "code": "KFC24",
-    "description": "Giảm giá 20% cho đơn hàng trên 99k",
+    "description": "Giảm giá 500% cho đơn hàng trên 99k",
     "pointsRequired": 30,
     "expirationDate": "2024-12-31T00:00:00.000Z",
     "isActive": true,
